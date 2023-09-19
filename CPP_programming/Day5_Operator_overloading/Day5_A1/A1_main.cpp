@@ -1,5 +1,4 @@
 #include"Complex.h"
-
 int main()
 {
     int real, imag;
@@ -49,7 +48,6 @@ int main()
     c3.display();
     cout<<"\n";
     
-    //cout<<"Hello"<<endl;
     return 0;
 }
 

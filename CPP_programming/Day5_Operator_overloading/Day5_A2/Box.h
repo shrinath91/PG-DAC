@@ -13,7 +13,7 @@ class Box
 
 
         int calculate_Volume();/////////facilitators
-        void display();
+        void display() const;
 
         bool operator<(Box &);
         bool operator>(Box &);
