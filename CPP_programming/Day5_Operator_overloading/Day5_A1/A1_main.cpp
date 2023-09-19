@@ -1,25 +1,19 @@
-
 #include"Complex.h"
-// Complex::Complex()////////////////////constructor
-// {
-//     this->real=2;
-//     this->imag=3;
-// }
 
 int main()
 {
     int real, imag;
-    Complex c1;
+    Complex c1; //2,3 default val
     cout<<"Real: "<<c1.getReal()<<"\n";//non const objects can access const member function
     cout<<"Imag: "<<c1.getImag()<<"\n";//non const objects can access const member function
     c1.display();    
 
-   Complex c2(5 ,4);
+    Complex c2(5 ,4);
     c2.display();
     
     Complex c3;
    
-    cout<<"********operator\"+\" overloading********\n";
+    cout<<"********operator\"+\" overloading********";
     cout<<"\nc2 + c1\n";  
     c3=c1+c2;
     c3.display();

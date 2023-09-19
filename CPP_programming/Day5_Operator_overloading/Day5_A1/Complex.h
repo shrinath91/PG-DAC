@@ -6,7 +6,7 @@ class Complex
     private:
         int real, imag;
     public:
-        // Complex();
+        Complex();
         Complex(int, int);
 
         int getReal() const;

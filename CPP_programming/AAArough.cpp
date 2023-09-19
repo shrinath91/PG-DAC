@@ -1,29 +1,31 @@
- #include <iostream>
-using namespace std;
- 
-class Test
-{
-    int value;
- 
- public:
-    Test(int v = 1) //////////with this we can use dafult argument so that parameterized  and dafult 
-    {               //////////constructor can be in one fuction only
-        value = v; 
-    }                   
-       
-    // const member function
-    int getValue() const
-    { 
-        return value; 
-    }
-};
- 
-int main()
-{
-    // non const object
-    Test t1(2);
-    cout << t1.getValue();
-    const Test t2(2);
-    cout << t2.getValue();
+
+
+int main() {
+    Complex c1(2, 3);
+    Complex c2;
+    Complex c3;
+
+    cout << "Initial Values:" << endl;
+    c1.display();
+    c2.display();
+
+    // Use pre-increment operator (++obj)
+    // c3=++c1;
+
+    // Use post-increment operator (obj++)
+    // c3 = c2++;
+
+    cout << "After Increment:" << endl;
+    c3= ++c1;
+    c3.display();
+    c3 = c2++;
+    c3.display();
+
+
+    // int a=2 , b=2 ,c;
+    // c=a++;
+    // cout<<c<<" "<<a<<endl; //2 3
+    // c=++b;
+    // cout<<c<<" "<<b; //3 3 
     return 0;
 }

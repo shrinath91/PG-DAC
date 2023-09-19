@@ -5,11 +5,16 @@
 //     this->real=2;
 //     this->imag=3;
 // }
-Complex::Complex(int r=2, int i=3)
+Complex::Complex(int r, int i)
 {
     this->real=r;
     this->imag=i;
 }
+// Complex::Complex(int r=2, int i=3)//we can use this parameterized constructor, it works ad dafault constructor also
+// {
+//     this->real=r;
+//     this->imag=i;
+// }
 
 int Complex::getReal() const//////////////////getter
 {
@@ -32,6 +37,8 @@ void Complex::display() const /////////////////facilitator
         cout<<"Value: "<<this->real<<this->imag<<"i"<<"\n";
     else
         cout<<"Value: "<<this->real<<"+"<<this->imag<<"i"<<"\n";
+
+    cout<<"\n";
     
 }
 
