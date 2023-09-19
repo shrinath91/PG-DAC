@@ -1,11 +1,11 @@
 #include"Complex.h"
 
-Complex::Complex()////////////////////constructor
-{
-    this->real=2;
-    this->imag=3;
-}
-Complex::Complex(int r, int i)
+// Complex::Complex()////////////////////constructor
+// {
+//     this->real=2;
+//     this->imag=3;
+// }
+Complex::Complex(int r=2, int i=3)
 {
     this->real=r;
     this->imag=i;

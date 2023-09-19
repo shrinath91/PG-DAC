@@ -1,4 +1,11 @@
+
 #include"Complex.h"
+// Complex::Complex()////////////////////constructor
+// {
+//     this->real=2;
+//     this->imag=3;
+// }
+
 int main()
 {
     int real, imag;
@@ -52,6 +59,9 @@ int main()
     return 0;
 }
 
+//g++ -O .\A1_main.cpp .\Complex.cpp /////use this for compilation
+// after using this command you will get .exe file 
+// ./a.exe //// to execute excutable file
 
 
 
@@ -98,7 +108,3 @@ int main()
 
 
 
-
-
-
-//made with ❤️;
