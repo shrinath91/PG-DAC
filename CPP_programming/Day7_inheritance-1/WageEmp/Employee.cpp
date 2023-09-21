@@ -28,5 +28,5 @@ void Employee::display()//in this function display() is overidden
 {
     cout<<"Employee Id: "<<e_id<<"\n";
     Person::display();
-    cout<<"Employee Salary: "<<sal<<"\n\n";
+    cout<<"Employee Salary: "<<sal<<"\n";
 }
