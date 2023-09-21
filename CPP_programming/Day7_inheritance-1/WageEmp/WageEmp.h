@@ -10,4 +10,6 @@ class WageEmp:public Employee
         WageEmp(WageEmp &);
         void display();
 
+        void setSal();
+
 };

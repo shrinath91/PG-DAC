@@ -23,6 +23,12 @@ Employee::Employee(Employee &obj):Person(obj)///////////////copy constructor
     //strcpy(this->name,obj.name);//in this line there is no object of person created directly so we cant call person's variables with obj.name
     //this->bdate=obj.bdate
 }
+
+void Employee::setSal(double sal)
+{
+    this->sal=sal;
+}
+
  
 void Employee::display()//in this function display() is overidden
 {

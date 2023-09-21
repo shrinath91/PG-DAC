@@ -22,3 +22,8 @@ void WageEmp::display()/////////////facilitators
     cout<<"**Rate: "<<rate<<"\n\n";
 
 }
+
+void WageEmp::setSal()
+{
+    Employee::setSal(this->hrs*this->rate);
+}

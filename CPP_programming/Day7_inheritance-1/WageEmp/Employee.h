@@ -10,5 +10,7 @@ class Employee:public Person
         Employee(const char*, int,int,int, double);
         Employee(Employee &);
 
+        void setSal(double);
+
         void display();
 };
