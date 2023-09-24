@@ -1,7 +1,7 @@
 #include"Cstring.h"
 Cstring::Cstring()//////////////////constructor
 {
-    length=2;
+    length=3;
     ch = new char[length];
     // ch[0]='\0';
     strcpy(ch,"NA");
@@ -29,18 +29,18 @@ void Cstring::display() const
     cout<<this->ch<<"\n";
 }
 
-int Cstring::operator<(Cstring &obj)/////////////////operator overloading
-{
-    return strcmp(this->ch, obj.ch);
-}
-int Cstring::operator>(Cstring &obj)//
-{
-    return strcmp(this->ch, obj.ch);
-}
-int Cstring::operator==(Cstring &obj)//
-{
-    return strcmp(this->ch, obj.ch);
-}
+// int Cstring::operator<(Cstring &obj)/////////////////operator overloading
+// {
+//     return strcmp(this->ch, obj.ch);
+// }
+// int Cstring::operator>(Cstring &obj)//
+// {
+//     return strcmp(this->ch, obj.ch);
+// }
+// int Cstring::operator==(Cstring &obj)//
+// {
+//     return strcmp(this->ch, obj.ch);
+// }
 Cstring Cstring::operator=(Cstring &obj)//
 {
     if(this == &obj)
@@ -54,12 +54,12 @@ Cstring Cstring::operator=(Cstring &obj)//
     return *this;
 }
 
-char Cstring::operator[](int value)
-{
-    if(0 < value && value < length)
-    {
-        return this->ch[value];
-    }
+// char Cstring::operator[](int value)
+// {
+//     if(0 < value && value < length)
+//     {
+//         return this->ch[value];
+//     }
     
-    return ch[0];
-}
+//     return ch[0];
+// }
