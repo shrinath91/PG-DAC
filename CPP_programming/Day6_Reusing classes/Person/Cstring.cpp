@@ -41,6 +41,7 @@ void Cstring::display() const
 // {
 //     return strcmp(this->ch, obj.ch);
 // }
+
 Cstring Cstring::operator=(Cstring &obj)//
 {
     if(this == &obj)
@@ -54,12 +55,12 @@ Cstring Cstring::operator=(Cstring &obj)//
     return *this;
 }
 
-// char Cstring::operator[](int value)
-// {
-//     if(0 < value && value < length)
-//     {
-//         return this->ch[value];
-//     }
+char Cstring::operator[](int value)
+{
+    if(0 < value && value < length)
+    {
+        return this->ch[value];
+    }
     
-//     return ch[0];
-// }
+    return ch[0];
+}

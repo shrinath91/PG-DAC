@@ -5,7 +5,7 @@ int main()
     Cstring c2("hello");
 
     int res;
-    res=c1.operator<(c2);
+    /// res=c1.operator<(c2); //implicit call
     res=c1<c2;
     cout<<"Res: "<<res<<"\n";
     if(res==-1)

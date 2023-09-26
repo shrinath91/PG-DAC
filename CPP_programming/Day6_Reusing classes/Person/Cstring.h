@@ -20,6 +20,6 @@ class Cstring
         // int operator==(Cstring &);
         Cstring operator=(Cstring &);
 
-        // char operator[](int );
+        char operator[](int );
 
 };

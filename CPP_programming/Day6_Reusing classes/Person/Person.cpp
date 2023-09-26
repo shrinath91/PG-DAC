@@ -9,10 +9,10 @@ Person::Person(Cstring nm, Date bd):name(nm),b_date(bd)
     //Cstring(nm);
     //Date(bd);
 }
-Person :: Person(const char * nm, int d, int m, int y):name(nm),b_date(d,m,y)
+Person :: Person(const char * nm, int d, int m, int y)//:name(nm),b_date(d,m,y)
 {
-    //Cstring(nm);s
-    //Date
+    // Cstring(nm); //some error
+    // Date(d,m,y);
 }
 Person::Person(Person &obj):name(obj.name), b_date(obj.b_date)
 {
