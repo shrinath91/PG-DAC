@@ -8,14 +8,15 @@ int main()
     int choice;
     char ch[40];
     cout<<"Enter string: ";
-    scanf("%[^\n]s",ch); //using scanset
+    // scanf("%[^\n]s",ch); //using scanset
+    cin.getline(ch,40);
     //gets(ch);
     cout<<"String : "<<ch;
     do
     {
-        cout<<"\n\nDo you want to continue: \n0.exit \n1.Count number of character \n2.Count number of spaces\n";
+        cout<<"\n\nPlease enter your Choice: \n0.exit \n1.Count number of character \n2.Count number of spaces\n";
         cout<<"3.Count number of vowels\n";
-        cout<<"\nPlease enter choice\n";
+        cout<<"\nPlease enter Choice\n";
         cin>>choice;
 
         switch (choice)

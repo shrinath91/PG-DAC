@@ -14,7 +14,7 @@ class Complex
         void setData(int &, int &);
         
         void display() const;
-        Complex operator+(Complex);
+        Complex operator+(Complex&);
         Complex operator-(Complex);
         Complex operator*(Complex);
 

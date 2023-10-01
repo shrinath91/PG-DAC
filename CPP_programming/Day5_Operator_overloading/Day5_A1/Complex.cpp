@@ -42,7 +42,7 @@ void Complex::display() const /////////////////facilitator
     
 }
 
-Complex Complex::operator+(Complex obj)///////////////////operator overloading
+Complex Complex::operator+(Complex &obj)///////////////////operator overloading
 {
     Complex temp;
     temp.real=this->real+obj.real;
@@ -63,14 +63,14 @@ Complex Complex::operator*(Complex obj)
     temp.imag=this->imag*obj.imag;
     return temp;
 }
-Complex Complex::operator++()
+Complex Complex::operator++(int a)
 {
     Complex temp;
     temp.real=this->real++;
     temp.imag=this->imag++;
     return temp;
 }
-Complex Complex::operator++(int a)
+Complex Complex::operator++()
 {
     Complex temp;
     temp.real= ++this->real;

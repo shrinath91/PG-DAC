@@ -9,7 +9,7 @@ int main()
 
     Complex c2(5 ,4);
     c2.display();
-    
+    c2+c1;    
     
     
     
