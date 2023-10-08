@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="10_99Prime Num"/>
+	<classpathentry kind="src" path="A10_Date"/>
+	<classpathentry kind="src" path="A2_Date"/>
+	<classpathentry kind="src" path="A3_Box"/>
+	<classpathentry kind="src" path="A4_point"/>
+	<classpathentry kind="src" path="A5_Complex"/>
+	<classpathentry kind="src" path="A6_Calculator"/>
+	<classpathentry kind="src" path="A7_Student"/>
+	<classpathentry kind="src" path="A8_MyMath"/>
+	<classpathentry kind="src" path="A9_MyNumber"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
