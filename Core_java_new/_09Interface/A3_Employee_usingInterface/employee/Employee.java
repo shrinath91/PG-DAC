@@ -1,9 +1,9 @@
-package _01Person;
+package employee;
 
 public class Employee extends Person {
 	//private Person p1;
-			private int eid;
-			private double salary;
+			public int eid;
+			protected double salary;
 			
 			public Employee() {
 				super();

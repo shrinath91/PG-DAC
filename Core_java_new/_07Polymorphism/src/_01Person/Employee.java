@@ -19,14 +19,19 @@ public class Employee extends Person {
 				this.salary = salary;
 			}
 		
-			public void display()
+			public String toString()
 			{
-				super.display();
-				System.out.println("Emp ID: "+eid);
-				
-				System.out.println("Salary: "+salary);
-				System.out.println();
-				System.out.print("abc\n");
-				
+				return super.toString()+"\nEmp Id: "+eid+"\nSalary: "+salary;
 			}
+			
+//			public void display()
+//			{
+//				super.display();
+//				System.out.println("Emp ID: "+eid);
+//				
+//				System.out.println("Salary: "+salary);
+//				System.out.println();
+//				System.out.print("abc\n");
+//				
+//			}
 }

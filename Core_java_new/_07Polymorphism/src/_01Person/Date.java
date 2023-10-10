@@ -20,9 +20,14 @@ public class Date {
 		this.mm = d.mm;
 		this.yy = d.yy;	
 	}
-	public void display()
+	
+	public String toString()
 	{
-		System.out.println("Birthdate: "+dd+"/"+mm+"/"+yy);
+		return "Birthdate: "+dd+"/"+mm+"/"+yy;
 	}
+//	public void display()
+//	{
+//		System.out.println("Birthdate: "+dd+"/"+mm+"/"+yy);
+//	}
 
 }
