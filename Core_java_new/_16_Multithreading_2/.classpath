@@ -5,10 +5,6 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="A1_Shapes"/>
-	<classpathentry kind="src" path="A2_MyNumber"/>
-	<classpathentry kind="src" path="A3_Employee_usingInterface"/>
-	<classpathentry kind="src" path="A5_StringOperation"/>
-	<classpathentry kind="src" path="A4_Comparer"/>
+	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
