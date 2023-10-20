@@ -1,0 +1,38 @@
+1.
+create table vehicle
+(
+	Vid int,
+	Vname varchar(15),
+	Price int,
+	discount double,
+	milage int,
+	details varchar(50)
+);
+insert into Vehicle values(1,'Activa',80000,10,35,'Two wheeler.Sturdy.Milage 30 knm'),
+
+insert into Vehicle 
+values(2,'Santro',95000,20,20,'Product of Hyandai'),
+(3,'Yamaha',160000,5,70,'Sturdy and good milage'),
+(4,'i-10',300000,8,18,'Good small car'),
+(5,'WaganR',250000,10,25,'Good milage car'),
+(6,'Hero Splender',75000,9,65,'Best bike'),
+(7,'Royal Enfild',190000,5,40,'a royal bike');
+
+
+
+
+2.
+create table Customer
+(
+	Custid int,
+	Cname varchar(15),
+	Location varchar(15)
+);
+
+insert into Customer values(1,'Nilima','Pimpri'),
+(2,'Ganesh','Pune'),
+(3,'Kishor','Kothrud'),
+(4,'Priya','Aundh');
+
+
+

@@ -1,0 +1,10 @@
+ALTER TABLE employees RENAME TO employee;///to change name
+
+
+CREATE TABLE employees
+(
+	eno int,
+	ename varchar(15),
+	sal int,
+	hire_date date
+);
