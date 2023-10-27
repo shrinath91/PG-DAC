@@ -1,6 +1,9 @@
-package a1;
+package a2;
 
-public class MyLinkedList {
+
+	
+
+public class MyLinkedList {//////////////////////////////class LikedList
 	Node head;
 
 	public MyLinkedList() {
@@ -145,10 +148,12 @@ public class MyLinkedList {
 //	at _8_Operation_on_LinkedList/a1.MyLinkedList.findMidValue(MyLinkedList.java:136)
 //	at _8_Operation_on_LinkedList/a1.Demo_LinkedList.main(Demo_LinkedList.java:66)
 //
+	
 //	
 	
-
 }
+
+
 
 
 
