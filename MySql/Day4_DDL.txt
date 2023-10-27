@@ -182,16 +182,24 @@ mysql> select tid, c.custid, c.cname, v.vname, s.sid, s.sname, cv.Buy_price
 |   5 |      3 | Kishor | Santro |  10 | Rajesh |    800000 |
 +-----+--------+--------+--------+-----+--------+-----------+
 
+
+
 4.
 *****************************************************************
+mysql> alter table vehicle
+    -> add Category varchar(20);
+
+mysql> alter table vehicle modify column Vid int auto_increment;
+Query OK, 7 rows affected (0.05 sec)
+
+insert into vehicle(vname,category,price,discount,milage,details) values
+('Passion','Bike',90000,null,50,'For passionate riders')
+('Honda City', 'Car', 140000, null, 20, 'Best in  Honda World') 
+('TVS icube','Electric Scooter',140000,null,40,'Best in New World');
 
 
-
-
-
-
-
-
+5.
+************************************************************************
 
 
 

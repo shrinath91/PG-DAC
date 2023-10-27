@@ -48,7 +48,7 @@ public class Cir_Queue {
 			//			rear++;
 		}
 		else
-			System.out.println("Circular Queue is Full");
+			System.out.println("Circular Queue is Full\n");
 
 	}
 
@@ -58,11 +58,15 @@ public class Cir_Queue {
 		if(!isEmpty())
 		{
 			data = arr[front];
-			front = (front+1)%size;
+
+			if(front == rear)//
+			{front = -1; rear = -1;}//
+			else
+				front = (front+1)%size;
 			//			front++;
 		}
 		else
-			System.out.println("Circular Queue is Empty");
+			System.out.println("Circular Queue is Empty\n");
 
 		return data;
 
@@ -70,14 +74,20 @@ public class Cir_Queue {
 
 	public void display()
 	{
+		int i;
 		System.out.println("\t\t****Circular Queue****");
-
-		for(int i=front; i!= rear+1; i=(i+1)%size )
-//		for(int i=front; i!= rear; i++ )
-			//		for(int i=front; i<= (rear+1)%size; i++ )
+		if(!isEmpty()) 
 		{
-			System.out.print("\t"+ arr[i]+" | ");
+			System.out.print("\t| ");
+			for(i=front; i!=rear; i=(i+1)%size )
+			{
+				System.out.print("\t"+ arr[i]+"\t| ");
+			}
+			System.out.print("\t"+ arr[i]+"\t| \n");
 		}
+		else
+			System.out.println("Circular Queue is Empty\n");
+
 	}
 
 

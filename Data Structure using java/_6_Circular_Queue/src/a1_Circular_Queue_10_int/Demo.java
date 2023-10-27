@@ -13,7 +13,6 @@ public class Demo {
 
 		do
 		{
-
 			System.out.println(" 1. Insert ");
 			System.out.println(" 2. Delete ");
 			System.out.println(" 3. Display ");
