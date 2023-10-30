@@ -1,0 +1,163 @@
+n-built Functions
+
+1.
+Ans->Select concat(upper(substr(ename,1,1)),lower(substr(ename,2))),
+
+
+select
+concat(upper(substr(ename,1,1)), lower(substr(ename,2))) as "Ename",
+concat(upper(substr(job,1,1)), lower(substr(job,2))  ) as "Job"
+from emp;
++--------+-----------+
+| Ename  | Job       |
++--------+-----------+
+| Smith  | Clerk     |
+| Allen  | Salesman  |
+| Ward   | Salesman  |
+| Jones  | Manager   |
+| Martin | Salesman  |
+| Blake  | Manager   |
+| Clark  | Manager   |
+| Scott  | Analyst   |
+| King   | President |
+| Turner | Salesman  |
+| Adams  | Clerk     |
+| James  | Clerk     |
+| Ford   | Analyst   |
+| Miller | Clerk     |
++--------+-----------+
+
+2.
+Ans->Select ename,length(ename) from emp;
+
+select ename, length(ename) from emp;
++--------+---------------+
+| ename  | length(ename) |
++--------+---------------+
+| SMITH  |             5 |
+| ALLEN  |             5 |
+| WARD   |             4 |
+| JONES  |             5 |
+| MARTIN |             6 |
+| BLAKE  |             5 |
+| CLARK  |             5 |
+| SCOTT  |             5 |
+| KING   |             4 |
+| TURNER |             6 |
+| ADAMS  |             5 |
+| JAMES  |             5 |
+| FORD   |             4 |
+| MILLER |             6 |
++--------+---------------+
+
+3.
+Ans->Select concat(lower(substr(ename,1,3)),upper(substr(ename,4)))
+     from emp;
+
+ select concat(lower(substr(ename,1,3)), upper(substr(ename,4))) as "Ename" from emp;
++--------+
+| Ename  |
++--------+
+| smiTH  |
+| allEN  |
+| warD   |
+| jonES  |
+| marTIN |
+| blaKE  |
+| claRK  |
+| scoTT  |
+| kinG   |
+| turNER |
+| adaMS  |
+| jamES  |
+| forD   |
+| milLER |
++--------+
+
+4.
+Ans->Select substr(ename,-3) from emp;
+
+select substr(ename,-3) from emp;
++------------------+
+| substr(ename,-3) |
++------------------+
+| ITH              |
+| LEN              |
+| ARD              |
+| NES              |
+| TIN              |
+| AKE              |
+| ARK              |
+| OTT              |
+| ING              |
+| NER              |
+| AMS              |
+| MES              |
+| ORD              |
+| LER              |
++------------------+
+
+5.
+select concat(lower(substr(ename,1,3)),lower(substr(job,-2)), '@knowit.com') as "Email" from emp;
++------------------+
+| Email            |
++------------------+
+| smirk@knowit.com |
+| allan@knowit.com |
+| waran@knowit.com |
+| joner@knowit.com |
+| maran@knowit.com |
+| blaer@knowit.com |
+| claer@knowit.com |
+| scost@knowit.com |
+| kinnt@knowit.com |
+| turan@knowit.com |
+| adark@knowit.com |
+| jamrk@knowit.com |
+| forst@knowit.com |
+| milrk@knowit.com |
++------------------+
+
+6.
+mysql> update emp set sal= sal+(sal*0.1) where curdate()-hiredate>40;
+Query OK, 14 rows affected (0.02 sec)
+Rows matched: 14  Changed: 14  Warnings: 0
+
+mysql> table emp;
++-------+--------+-----------+------+------------+---------+---------+--------+
+| EMPNO | ENAME  | JOB       | MGR  | HIREDATE   | SAL     | COMM    | DEPTNO |
++-------+--------+-----------+------+------------+---------+---------+--------+
+|  7369 | SMITH  | CLERK     | 7902 | 1980-12-17 |  880.00 |    NULL |     20 |
+|  7499 | ALLEN  | SALESMAN  | 7698 | 1981-02-20 | 1760.00 |  300.00 |     30 |
+|  7521 | WARD   | SALESMAN  | 7698 | 1981-02-22 | 1375.00 |  500.00 |     30 |
+|  7566 | JONES  | MANAGER   | 7839 | 1981-04-02 | 3272.50 |    NULL |     20 |
+|  7654 | MARTIN | SALESMAN  | 7698 | 1981-09-28 | 1375.00 | 1400.00 |     30 |
+|  7698 | BLAKE  | MANAGER   | 7839 | 1981-05-01 | 3135.00 |    NULL |     30 |
+|  7782 | CLARK  | MANAGER   | 7839 | 1981-09-06 | 2695.00 |    NULL |     10 |
+|  7788 | SCOTT  | ANALYST   | 7566 | 1982-12-09 | 3300.00 |    NULL |     20 |
+|  7839 | KING   | PRESIDENT | NULL | 1981-11-17 | 5500.00 |    NULL |     10 |
+|  7844 | TURNER | SALESMAN  | 7698 | 1981-09-08 | 1650.00 |    0.00 |     30 |
+|  7876 | ADAMS  | CLERK     | 7788 | 1983-01-12 | 1210.00 |    NULL |     20 |
+|  7900 | JAMES  | CLERK     | 7698 | 1981-12-03 | 1045.00 |    NULL |     30 |
+|  7902 | FORD   | ANALYST   | 7566 | 1981-12-03 | 3300.00 |    NULL |     20 |
+|  7934 | MILLER | CLERK     | 7782 | 1982-01-23 | 1430.00 |    NULL |     10 |
++-------+--------+-----------+------+------------+---------+---------+--------+
+
+7.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

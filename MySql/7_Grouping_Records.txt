@@ -1,0 +1,277 @@
+**********Grouping Records*****************
+Assignment
+
+1.
+Ans->Select avg(sal) from emp;
++-------------+
+| avg(sal)    |
++-------------+
+| 2073.214286 |
++-------------+
+
+2.
+Ans->Select avg(sal),deptno from emp where deptno=10;
++-------------+--------+
+| avg(sal)    | deptno |
++-------------+--------+
+| 2916.666667 |     10 |
++-------------+--------+
+
+
+3.
+mysql> select max(sal), deptno from emp group by deptno;
++----------+--------+
+| max(sal) | deptno |
++----------+--------+
+|  3000.00 |     20 |
+|  2850.00 |     30 |
+|  5000.00 |     10 |
++----------+--------+
+
+4.
+Ans->Select count(empno),deptno from emp group by deptno;
+mysql> select count(empno), deptno from emp group by deptno;
++--------------+--------+
+| count(empno) | deptno |
++--------------+--------+
+|            5 |     20 |
+|            6 |     30 |
+|            3 |     10 |
++--------------+--------+
+mysql> select count(*), deptno from emp group by deptno;
++----------+--------+
+| count(*) | deptno |
++----------+--------+
+|        5 |     20 |
+|        6 |     30 |
+|        3 |     10 |
++----------+--------+
+
+5.
+mysql> select count(*) from emp where job='Manager';
++----------+
+| count(*) |
++----------+
+|        3 |
++----------+
+
+//not related
+mysql> select count(mgr), mgr from emp group by mgr;
++------------+------+
+| count(mgr) | mgr  |
++------------+------+
+|          1 | 7902 |
+|          5 | 7698 |
+|          3 | 7839 |
+|          2 | 7566 |
+|          0 | NULL |
+|          1 | 7788 |
+|          1 | 7782 |
++------------+------+
+
+6.
+Ans->Select count(*) from emp where job in('Manager','Analyst','clerks');
++----------+
+| count(*) |
++----------+
+|        5 |
++----------+
+
+7.
+Ans->Select count(*),deptno
+     From emp
+     group by deptno
+     having count(*)>3;
+
+mysql> select deptno, count(*) 
+	from emp 
+	group by deptno 
+	having count(*)>3;
++--------+----------+
+| deptno | count(*) |
++--------+----------+
+|     20 |        5 |
+|     30 |        6 |
++--------+----------+
+
+8.
+Ans->Select count(*),job
+     from emp
+     group by job
+     having count(*)>3;
+
+select job, count(*) 
+from emp 
+group by job 
+having count(*)>3;
++----------+----------+
+| job      | count(*) |
++----------+----------+
+| CLERK    |        4 |
+| SALESMAN |        4 |
++----------+----------+
+
+9.
+select sum(sal), deptno from emp group by deptno;
++----------+--------+
+| sum(sal) | deptno |
++----------+--------+
+| 10875.00 |     20 |
+|  9400.00 |     30 |
+|  8750.00 |     10 |
++----------+--------+
+
+10.
+select deptno, max(sal), min(sal), avg(sal) 
+from emp
+group by deptno;
++--------+----------+----------+-------------+
+| deptno | max(sal) | min(sal) | avg(sal)    |
++--------+----------+----------+-------------+
+|     20 |  3000.00 |   800.00 | 2175.000000 |
+|     30 |  2850.00 |   950.00 | 1566.666667 |
+|     10 |  5000.00 |  1300.00 | 2916.666667 |
++--------+----------+----------+-------------+
+
+11.
+select deptno, sum(sal) from emp where sal>1500 group by deptno;
++--------+----------+
+| deptno | sum(sal) |
++--------+----------+
+|     30 |  4450.00 |
+|     20 |  8975.00 |
+|     10 |  7450.00 |
++--------+----------+
+
+12.
+select count(*), deptno from emp where job='clerk' group by deptno;
++----------+--------+
+| count(*) | deptno |
++----------+--------+
+|        2 |     20 |
+|        1 |     30 |
+|        1 |     10 |
++----------+--------+
+
+13.
+select  mgr, count(*) from emp group by mgr;
++------+----------+
+| mgr  | count(*) |
++------+----------+
+| 7902 |        1 |
+| 7698 |        5 |
+| 7839 |        3 |
+| 7566 |        2 |
+| NULL |        1 |
+| 7788 |        1 |
+| 7782 |        1 |
++------+----------+
+
+14.
+select deptno, avg(sal) from emp group by deptno having avg(sal)>2000;
++--------+-------------+
+| deptno | avg(sal)    |
++--------+-------------+
+|     20 | 2175.000000 |
+|     10 | 2916.666667 |
++--------+-------------+
+
+15.
+select deptno, count(*) from emp group by deptno;
++--------+----------+
+| deptno | count(*) |
++--------+----------+
+|     20 |        5 |
+|     30 |        6 |
+|     10 |        3 |
++--------+----------+
+
+16.
+select mgr "More than 2", count(*) "count(job)" 
+from emp 
+where job in('analyst','salesman') 
+group by mgr
+having count(job)>2;
+
++-------------+------------+
+| More than 2 | count(job) |
++-------------+------------+
+|        7698 |          4 |
++-------------+------------+
+
+17.
+select * from emp where comm is not null;
++-------+--------+----------+------+------------+---------+---------+--------+
+| EMPNO | ENAME  | JOB      | MGR  | HIREDATE   | SAL     | COMM    | DEPTNO |
++-------+--------+----------+------+------------+---------+---------+--------+
+|  7499 | ALLEN  | SALESMAN | 7698 | 1981-02-20 | 1600.00 |  300.00 |     30 |
+|  7521 | WARD   | SALESMAN | 7698 | 1981-02-22 | 1250.00 |  500.00 |     30 |
+|  7654 | MARTIN | SALESMAN | 7698 | 1981-09-28 | 1250.00 | 1400.00 |     30 |
+|  7844 | TURNER | SALESMAN | 7698 | 1981-09-08 | 1500.00 |    0.00 |     30 |
++-------+--------+----------+------+------------+---------+---------+--------+
+
+
+18.
+select max(sal)-min(sal) "Diff" from emp where deptno = 20;
++---------+
+| Diff    |
++---------+
+| 2200.00 |
++---------+
+
+19.
+select * from emp where deptno in(20,30) and comm is null;
++-------+-------+---------+------+------------+---------+------+--------+
+| EMPNO | ENAME | JOB     | MGR  | HIREDATE   | SAL     | COMM | DEPTNO |
++-------+-------+---------+------+------------+---------+------+--------+
+|  7369 | SMITH | CLERK   | 7902 | 1980-12-17 |  800.00 | NULL |     20 |
+|  7566 | JONES | MANAGER | 7839 | 1981-04-02 | 2975.00 | NULL |     20 |
+|  7698 | BLAKE | MANAGER | 7839 | 1981-05-01 | 2850.00 | NULL |     30 |
+|  7788 | SCOTT | ANALYST | 7566 | 1982-12-09 | 3000.00 | NULL |     20 |
+|  7876 | ADAMS | CLERK   | 7788 | 1983-01-12 | 1100.00 | NULL |     20 |
+|  7900 | JAMES | CLERK   | 7698 | 1981-12-03 |  950.00 | NULL |     30 |
+|  7902 | FORD  | ANALYST | 7566 | 1981-12-03 | 3000.00 | NULL |     20 |
++-------+-------+---------+------+------------+---------+------+--------+
+
+20.
+select job, sum(sal) from emp where deptno not in(30) group by job having sum(sal)>5000;
++---------+----------+
+| job     | sum(sal) |
++---------+----------+
+| MANAGER |  5425.00 |
+| ANALYST |  6000.00 |
++---------+----------+
+
+21.
+select job, max(sal) 
+from emp 
+where job in('manager','clerk','salesman') and deptno=10
+group by job
+order by max(sal) desc;
+
++---------+----------+
+| job     | max(sal) |
++---------+----------+
+| MANAGER |  2450.00 |
+| CLERK   |  1300.00 |
++---------+----------+
+
+22.
+select deptno, count(*) 
+from emp 
+group by deptno 
+having count(*)>3;
++--------+----------+
+| deptno | count(*) |
++--------+----------+
+|     20 |        5 |
+|     30 |        6 |
++--------+----------+
+
+
+
+
+
+
+
+
