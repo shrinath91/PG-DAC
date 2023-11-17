@@ -5,7 +5,6 @@ public class Cir_Queue {
 	private int arr[];
 	public Cir_Queue() 
 	{
-		super();
 		this.front = -1;
 		this.rear = -1;
 		this.size = 3;
@@ -20,19 +19,27 @@ public class Cir_Queue {
 		this.arr = new int[size];
 	}
 
-	private boolean isEmpty()
+//	private boolean isEmpty()
+//	{
+//		if(front== -1 && rear==-1)
+//			return true;
+//
+//		return false;
+//	}
+//	private boolean isFull()
+//	{
+//		if(front == (rear+1)%size)
+//			return true;
+//
+//		return false;
+//	}
+	public boolean isEmpty()
 	{
-		if(front== -1 && rear==-1)
-			return true;
-
-		return false;
+		return front==-1 && rear==-1?true:false; 
 	}
-	private boolean isFull()
+	public boolean isFull()
 	{
-		if(front == (rear+1)%size)
-			return true;
-
-		return false;
+		return front==(rear+1)%size?true:false;
 	}
 
 	public void enQueue(int data)
@@ -45,7 +52,7 @@ public class Cir_Queue {
 			}
 			rear = (rear+1)%size;
 			arr[rear] = data;
-			//			rear++;
+			//rear++;
 		}
 		else
 			System.out.println("Circular Queue is Full\n");
@@ -63,7 +70,7 @@ public class Cir_Queue {
 			{front = -1; rear = -1;}//
 			else
 				front = (front+1)%size;
-			//			front++;
+			
 		}
 		else
 			System.out.println("Circular Queue is Empty\n");

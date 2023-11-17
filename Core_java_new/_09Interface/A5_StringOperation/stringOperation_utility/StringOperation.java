@@ -1,4 +1,4 @@
-package stringOp_utility;
+package stringOperation_utility;
 
 public interface StringOperation {
 	public void reverse(String str);

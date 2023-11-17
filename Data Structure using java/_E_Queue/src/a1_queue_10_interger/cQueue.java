@@ -19,20 +19,29 @@ public class cQueue {
 		this.arr = new int[3];
 	}
 	
-	private boolean isEmpty()
+//	private boolean isEmpty()
+//	{
+//		if(front == -1)
+//			return true; 
+//		
+//		return false;
+//		
+//	}
+//	private boolean isFull()
+//	{
+//		if(rear==size-1)
+//			return true;
+//		
+//		return false;
+//	}
+	
+	public boolean isEmpty()
 	{
-		if(front == -1)
-			return true; 
-		
-		return false;
-		
+		return front==-1?true:false;
 	}
-	private boolean isFull()
+	public boolean isFull()
 	{
-		if(rear==size-1)
-			return true;
-		
-		return false;
+		return rear==size-1?true:false;
 	}
 	
 	public void enQueue(int data)

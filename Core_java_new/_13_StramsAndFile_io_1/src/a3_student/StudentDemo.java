@@ -17,12 +17,12 @@ public class StudentDemo {
 		try {
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 			
-			System.out.println("Enter Name: ");
-			name = br.readLine();
 
 			System.out.println("Enter roll: ");
 			roll_no = Integer.parseInt(br.readLine());
 			
+			System.out.println("Enter Name: ");
+			name = br.readLine();
 			
 			System.out.println("Enter Marks: ");
 			marks = Integer.parseInt(br.readLine());

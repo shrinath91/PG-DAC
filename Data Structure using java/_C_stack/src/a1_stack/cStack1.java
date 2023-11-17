@@ -1,6 +1,5 @@
 package a1_stack;
 
-
 public class cStack1 
 {
 	private int top;

@@ -1,6 +1,5 @@
 package a1_stack;
 
-//import a1_stack.cStack;
 import java.util.Scanner;
 
 import a4_paranthesis.cStack;

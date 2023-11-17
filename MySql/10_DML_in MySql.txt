@@ -1,0 +1,382 @@
+create table course
+(
+cid int,
+cname varchar(15) unique not null,
+fees int not null,
+duration int not null,
+constraint pk_Cid primary key(cid)
+);
+
+create table trainer
+(
+tid char(2),
+tname varchar(15) not null,
+cid int,
+constraint pk_tid primary key(tid),
+constraint fk_cid foreign key(cid)
+references course(cid) on update cascade
+);
+
+2------
+insert into  trainer values 
+('t1', 'Smita',1,20000);
+('t2', 'Amit',2, 25000),
+('t3','Rohan',2,28000),
+('t4','Archana',3,25000),
+('t5','Raj',4,30000),
+('t6','Rututja',5,36000);
++-----+---------+------+-------+
+| tid | tname   | cid  | sal   |
++-----+---------+------+-------+
+| t1  | Smita   |    1 | 20000 |
+| t2  | Amit    |    2 | 25000 |
+| t3  | Rohan   |    2 | 28000 |
+| t4  | Archana |    3 | 25000 |
+| t5  | Raj     |    4 | 30000 |
+| t6  | Rututja |    5 | 36000 |
++-----+---------+------+-------+
+
+insert into course values
+(1,'c-prog',5000,40),
+(2,'CPP',8000,80),
+(3,'Core Java',10000,100),
+(4,'Oracle',12000,80),
+(5,'MongoDB',8000,50),
+(6,'WP',20000,150);
++-----+-----------+-------+----------+
+| cid | cname     | fees  | duration |
++-----+-----------+-------+----------+
+|   1 | c-prog    |  5000 |       40 |
+|   2 | CPP       |  8000 |       80 |
+|   3 | Core Java | 10000 |      100 |
+|   4 | Oracle    | 12000 |       80 |
+|   5 | MongoDB   |  8000 |       50 |
+|   6 | WP        | 20000 |      150 |
++-----+-----------+-------+----------+
+
+3---------------
+update course 
+set fees=fees+fees*0.8 
+where cname='WP';
+
++-----+-----------+-------+----------+
+| cid | cname     | fees  | duration |
++-----+-----------+-------+----------+
+|   1 | c-prog    |  5400 |       40 |
+|   2 | CPP       |  8640 |       80 |
+|   3 | Core Java | 10800 |      100 |
+|   4 | Oracle    | 12960 |       80 |
+|   5 | MongoDB   |  8640 |       50 |
+|   6 | WP        | 21600 |      150 |
++-----+-----------+-------+----------+
+
+4----------------------
+mysql> select count(*) from course;
+
++----------+
+| count(*) |
++----------+
+|        6 |
++----------+
+5-----------------------
+update course 
+set cid=7
+where cid=6;
++-----+-----------+-------+----------+
+| cid | cname     | fees  | duration |
++-----+-----------+-------+----------+
+|   1 | c-prog    |  5400 |       40 |
+|   2 | CPP       |  8640 |       80 |
+|   3 | Core Java | 10800 |      100 |
+|   4 | Oracle    | 12960 |       80 |
+|   5 | MongoDB   |  8640 |       50 |
+|   7 | WP        | 21600 |      150 |
++-----+-----------+-------+----------+
+
++-----+---------+------+-------+
+| tid | tname   | cid  | sal   |
++-----+---------+------+-------+
+| t1  | Smita   |    1 | 20000 |
+| t2  | Amit    |    2 | 25000 |
+| t3  | Rohan   |    2 | 28000 |
+| t4  | Archana |    3 | 25000 |
+| t5  | Raj     |    4 | 30000 |
+| t6  | Rututja |    5 | 36000 |
++-----+---------+------+-------+
+
+6-----------------------------------
+select * from course where fees in(25000, 30000);
+Empty set (0.01 sec)
+
+7---------------------------------------
+select sum(fees) from course;
++-----------+
+| sum(fees) |
++-----------+
+|     68040 |
++-----------+
+
+8.-------------------------------------
+select min(fees) from course;
++-----------+
+| min(fees) |
++-----------+
+|      5400 |
++-----------+
+
+9-------------------------------------
+select * 
+from trainer 
+order by sal 
+limit 1;
++-----+-------+------+-------+
+| tid | tname | cid  | sal   |
++-----+-------+------+-------+
+| t1  | Smita |    1 | 20000 |
++-----+-------+------+-------+
+
+
+10-------------------------------------------
+select * 
+from course 
+order by duration 
+limit 1;
++-----+--------+------+----------+
+| cid | cname  | fees | duration |
++-----+--------+------+----------+
+|   1 | c-prog | 5400 |       40 |
++-----+--------+------+----------+
+
+11----------------------------------------------
+//alter table trainer modify tid char(3);
+insert into trainer values
+('t7','Geeta',null,12000),
+('t8','Seema',null,18000),
+('t9','Umesh',null,null),
+('t10','Sumeet',6,21000);
+
+
+12------------------------------------------------
+alter table trainer 
+add column incentive float(5,2);
+
+
+13-------------------------------------------------
+ update trainer
+ set incentive=1000
+ where cid=6;
+
+
+14---------------
+
+update trainer
+    -> set incentive=800
+    -> where cid=1;
++-----+---------+------+-------+-----------+
+| tid | tname   | cid  | sal   | incentive |
++-----+---------+------+-------+-----------+
+| t1  | Smita   |    1 | 20000 |    800.00 |
+| t10 | sumit   |    7 | 21000 |   1000.00 |
+| t2  | Amit    |    2 | 25000 |      NULL |
+| t3  | Rohan   |    2 | 28000 |      NULL |
+| t4  | Archana |    3 | 25000 |      NULL |
+| t5  | Raj     |    4 | 30000 |      NULL |
+| t6  | Rututja |    5 | 36000 |      NULL |
+| t7  | Geeta   | NULL | 12000 |      NULL |
+| t8  | Seema   | NULL | 18000 |      NULL |
+| t9  | Umesh   | NULL |  NULL |      NULL |
++-----+---------+------+-------+-----------+
+
+
+15-----------------------------------
+select * from trainer where incentive is not null;
++-----+-------+------+-------+-----------+
+| tid | tname | cid  | sal   | incentive |
++-----+-------+------+-------+-----------+
+| t1  | Smita |    1 | 20000 |    800.00 |
+| t10 | sumit |    7 | 21000 |   1000.00 |
++-----+-------+------+-------+-----------+
+
+16=----------------------------------
+select * from trainer where incentive is null;
++-----+---------+------+-------+-----------+
+| tid | tname   | cid  | sal   | incentive |
++-----+---------+------+-------+-----------+
+| t2  | Amit    |    2 | 25000 |      NULL |
+| t3  | Rohan   |    2 | 28000 |      NULL |
+| t4  | Archana |    3 | 25000 |      NULL |
+| t5  | Raj     |    4 | 30000 |      NULL |
+| t6  | Rututja |    5 | 36000 |      NULL |
+| t7  | Geeta   | NULL | 12000 |      NULL |
+| t8  | Seema   | NULL | 18000 |      NULL |
+| t9  | Umesh   | NULL |  NULL |      NULL |
++-----+---------+------+-------+-----------+
+
+17------------------------------------------------
+select * from trainer where tname like '%ee%';
++-----+-------+------+-------+-----------+
+| tid | tname | cid  | sal   | incentive |
++-----+-------+------+-------+-----------+
+| t7  | Geeta | NULL | 12000 |      NULL |
+| t8  | Seema | NULL | 18000 |      NULL |
++-----+-------+------+-------+-----------+
+
+18------------------------------------------------
+mysql> select *,ifnull(sal,0)+ifnull(incentive,0) "Total sal"
+       from trainer;
++-----+---------+------+-------+-----------+-----------+
+| tid | tname   | cid  | sal   | incentive | Total sal |
++-----+---------+------+-------+-----------+-----------+
+| t1  | Smita   |    1 | 20000 |    800.00 |  20800.00 |
+| t10 | sumit   |    7 | 21000 |   1000.00 |  22000.00 |
+| t2  | Amit    |    2 | 25000 |      NULL |  25000.00 |
+| t3  | Rohan   |    2 | 28000 |      NULL |  28000.00 |
+| t4  | Archana |    3 | 25000 |      NULL |  25000.00 |
+| t5  | Raj     |    4 | 30000 |      NULL |  30000.00 |
+| t6  | Rututja |    5 | 36000 |      NULL |  36000.00 |
+| t7  | Geeta   | NULL | 12000 |      NULL |  12000.00 |
+| t8  | Seema   | NULL | 18000 |      NULL |  18000.00 |
+| t9  | Umesh   | NULL |  NULL |      NULL |      0.00 |
++-----+---------+------+-------+-----------+-----------+
+
+19----------------------------------------------------------
+alter table trainer 
+modify  fk_cid foreign key(cid)
+references course(cid) on delete cascade on update cascade;
+//not working in mysql// but valid in sql
+
+
+alter table trainer
+drop constraint fk_cid;
+
+alter table trainer 
+add constraint fk_cid foreign key(cid)
+references course(cid) on delete cascade on update cascade
+
+20--------------------------------------------------------
+select cid, count(*) from trainer group by cid;
++------+----------+
+| cid  | count(*) |
++------+----------+
+| NULL |        3 |
+|    1 |        1 |
+|    2 |        2 |
+|    3 |        1 |
+|    4 |        1 |
+|    5 |        1 |
+|    7 |        1 |
++------+----------+
+
+21--------------------------------------------------------------
+select t.tid ,t.tname, t.cid, c.cname from trainer t, course c
+where t.cid=c.cid;
++-----+---------+------+-----------+
+| tid | tname   | cid  | cname     |
++-----+---------+------+-----------+
+| t1  | Smita   |    1 | c-prog    |
+| t4  | Archana |    3 | Core Java |
+| t2  | Amit    |    2 | CPP       |
+| t3  | Rohan   |    2 | CPP       |
+| t6  | Rututja |    5 | MongoDB   |
+| t5  | Raj     |    4 | Oracle    |
+| t10 | sumit   |    7 | WP        |
++-----+---------+------+-----------+
+
+22-------------------------------------------------------------
+
+select t.tid, t.tname, c.cid, c.cname, c.duration 
+from trainer t, course c
+where duration>50 and t.cid=c.cid; 
++-----+---------+-----+-----------+----------+
+| tid | tname   | cid | cname     | duration |
++-----+---------+-----+-----------+----------+
+| t2  | Amit    |   2 | CPP       |       80 |
+| t3  | Rohan   |   2 | CPP       |       80 |
+| t4  | Archana |   3 | Core Java |      100 |
+| t5  | Raj     |   4 | Oracle    |       80 |
+| t10 | sumit   |   7 | WP        |      150 |
++-----+---------+-----+-----------+----------+
+
+23--------------------------------------------------------------
+select count(cid) from course where fees>10000;
++------------+
+| count(cid) |
++------------+
+|          3 |
++------------+
+
+24------------------------------------------------------------
+select * from course order by duration desc;
++-----+-----------+-------+----------+
+| cid | cname     | fees  | duration |
++-----+-----------+-------+----------+
+|   7 | WP        | 21600 |      150 |
+|   3 | Core Java | 10800 |      100 |
+|   2 | CPP       |  8640 |       80 |
+|   4 | Oracle    | 12960 |       80 |
+|   5 | MongoDB   |  8640 |       50 |
+|   1 | c-prog    |  5400 |       40 |
++-----+-----------+-------+----------+
+
+25-------------------------------------------------------------
+select * from course order by fees limit 3;
++-----+---------+------+----------+
+| cid | cname   | fees | duration |
++-----+---------+------+----------+
+|   1 | c-prog  | 5400 |       40 |
+|   2 | CPP     | 8640 |       80 |
+|   5 | MongoDB | 8640 |       50 |
++-----+---------+------+----------+
+
+26--------------------------------------------------
+alter table trainer add column email varchar(20);
+
+-
+27-------------------------------------------------
+update trainer 
+set email=concat(substr(tname,1,3),ifnull(cid,"_"),"@knowit.com");
++-----+---------+------+-------+-----------+-----------------+
+| tid | tname   | cid  | sal   | incentive | email           |
++-----+---------+------+-------+-----------+-----------------+
+| t1  | Smita   |    1 | 20000 |    800.00 | Smi1@knowit.com |
+| t10 | sumit   |    7 | 21000 |   1000.00 | sum7@knowit.com |
+| t2  | Amit    |    2 | 25000 |      NULL | Ami2@knowit.com |
+| t3  | Rohan   |    2 | 28000 |      NULL | Roh2@knowit.com |
+| t4  | Archana |    3 | 25000 |      NULL | Arc3@knowit.com |
+| t5  | Raj     |    4 | 30000 |      NULL | Raj4@knowit.com |
+| t6  | Rututja |    5 | 36000 |      NULL | Rut5@knowit.com |
+| t7  | Geeta   | NULL | 12000 |      NULL | Gee_@knowit.com |
+| t8  | Seema   | NULL | 18000 |      NULL | See_@knowit.com |
+| t9  | Umesh   | NULL |  NULL |      NULL | Ume_@knowit.com |
++-----+---------+------+-------+-----------+-----------------+
+1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

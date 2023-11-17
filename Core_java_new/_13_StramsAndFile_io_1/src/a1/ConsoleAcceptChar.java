@@ -16,7 +16,7 @@ public class ConsoleAcceptChar {
 		int count_digi=0;
 		try
 		{
-			while( (n=br.read())!='q'   )
+			while( (n=br.read())!='q' )
 			{
 				if('a'<=n&&n<='z' || 'A'<=n&&n<='Z')
 					count_alpha++;

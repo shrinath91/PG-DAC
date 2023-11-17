@@ -9,7 +9,7 @@ public class DoublyLL_Demo {
 		int ch, data;
 		DoublyLL l1 = new DoublyLL();
 		Scanner sc = new Scanner(System.in);
-
+		
 		System.out.println("1. Menu");
 		System.out.println("2. Add Node");
 		System.out.println("3. Create Linked List");
@@ -19,6 +19,7 @@ public class DoublyLL_Demo {
 		System.out.println("7. Delete data at Pos");
 		System.out.println("8. Print Reverse");
 		System.out.println("9. Display Element at Pos");
+
 		do 
 		{
 			System.out.println("\n1.Menu");

@@ -176,9 +176,14 @@ public class DoublyLL
 
 //			Node del = mv.next;
 			if(mv.next.next!=null)
+			{
+		
 				mv.next = mv.next.next;
+				mv.next.prev=mv;
+			}
+				
 			else
-				mv.next = null;
+				mv.next = null;//means assign null
 		}
 	}
 	

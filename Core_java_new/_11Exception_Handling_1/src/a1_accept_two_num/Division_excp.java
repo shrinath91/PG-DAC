@@ -1,7 +1,8 @@
 package a1_accept_two_num;
 
-public class Division_excp {
-
+public  class Division_excp 
+{
+	
 	public static void main(String[] args) {
 		int res=0;
 		int num1, num2;
@@ -20,7 +21,8 @@ public class Division_excp {
 		
 		
 		System.out.println("Result: "+res);
-
+		
 	}
-
+	
 }
+

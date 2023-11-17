@@ -19,11 +19,11 @@ public class StudentDemo {
 		arr[2]= new Student(3, "zbcde" , 79);
 		arr[3]= new Student(4, "qbcdef" , 69);
 		arr[4]= new Student(5, "ybc" , 59);
+		Scanner sc = new Scanner(System.in);
 		
 		int choice;
 		do {
 			System.out.println("1. Sort roll wise\n2.Sort name wise\n3.Sort marks wise\n please enter your choice: ");
-			Scanner sc = new Scanner(System.in);
 			choice=sc.nextInt();
 			
 			switch(choice)
@@ -77,11 +77,10 @@ public class StudentDemo {
 					}
 				}
 				displayArr(arr);
-				
 				break;
 			}
-			sc.close();
 		}while(choice!=0);
+		sc.close();
 		
 
 	}

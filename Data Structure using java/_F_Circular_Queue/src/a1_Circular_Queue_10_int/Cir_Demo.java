@@ -2,7 +2,7 @@ package a1_Circular_Queue_10_int;
 
 import java.util.Scanner;
 
-public class Demo {
+public class Cir_Demo {
 
 	public static void main(String[] args) {
 
