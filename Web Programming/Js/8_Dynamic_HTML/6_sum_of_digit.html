@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sumOfDigits(num)
+        {
+            sum=0;
+            while(num>0)
+            {
+                sum+=num%10;
+                num=parseInt(num/10);
+            }
+            document.getElementById('res').innerHTML=sum
+        }
+    </script>
+</head>
+<body>
+    <form method="get">
+        <table>
+            <tr>
+                <td colspan="2"><b>Sum of Digits</b></td>
+            </tr>
+            <tr>
+                <td><label for="n1">Enter Number:</label></td>
+                <td><input type="number" name="num" id="n1"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Calculate" onclick="sumOfDigits(num.value)"></td>
+                <td id=res></td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>

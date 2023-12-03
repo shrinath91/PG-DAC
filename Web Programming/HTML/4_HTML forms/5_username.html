@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form5</title>
+</head>
+<body>
+    <form>
+
+        <h3>user info</h3>
+        <table>
+            <tr>
+                <td>
+                    <label for="name">Name:</label>
+                </td>
+                <td>
+                    <input type="text" name="name" id="name" list="name1">
+                </td>
+                <td>
+                    <label for="email">Email:</label>
+                </td>
+                <td>
+                    <input type="email" name="email" id="email" maxlength="15" placeholder="xyz@gmail.com"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="bdate">Birth Date:</label></td>
+                <td><input type="date" name="bdate" id="bdate"/></td>
+                <td><label for="time">Time:</label></td>
+                <td><input type="time" name="time" id="time"/></td>
+            </tr>  
+
+
+        </table>
+    </form>
+    <datalist id="name1">
+    <option value="Suraj"></option>
+    <option value="Shubham"></option>
+    <option value="Shrinath"></option>
+    <option value="Omkar"></option>
+    </datalist> 
+   
+</body>
+</html>

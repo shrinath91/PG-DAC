@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>3_form</title>
+    <script>
+            function validate()
+            {
+                //name validate
+                lname = document.getElementById("lastname").value;
+                fname = document.getElementById("firstname").value;
+                namePattern = /^[A-Za-z]+$/;
+                if(!(namePattern.test(lname) && namePattern.test(fname)))
+                {
+                    alert("Enter name with only alphabets");
+                    return;
+                }
+                //acc no validation
+                accNo = document.getElementById("accno").value;
+                accNoPattern = /^[\d]{10}$/;
+                if(!accNoPattern.test(accNo))
+                {
+                    alert("Enter Acc No. with 10 numbers only")
+                    return;
+                }
+                // pass length validation
+                pass = document.getElementById("pass1").value;
+                if(pass.length < 5 && pass.length > 15)
+                {
+                    document.getElementById("div1").innerHTML = "Password should be 5 to 15 characters only";
+                    return;
+                }
+
+                document.getElementById("ff1").submit();
+            
+            }
+            function checkPassValidity()
+            {
+                pass = document.getElementById("pass1").value;
+                passPattern1 = /^[A-Za-z]+$/;
+                passPattern2 = /^[A-Za-z\d]+$/;
+                passPattern3 = /^[\w!@#$%^&*]+$/; 
+                if(passPattern1.test(pass))
+                {
+                    document.getElementById("div1").innerHTML = "Weak Password!!!"
+                    return;
+                }
+                else if(passPattern2.test(pass))
+                {
+                    document.getElementById("div1").innerHTML = "Average Password!!!"
+                    return;
+                }
+                else if(passPattern3.test(pass))
+                {
+                    document.getElementById("div1").innerHTML = "Strong Password!!!"
+                    return;
+                }
+            }
+            function checkPassMatch()
+            {
+                passRepeated = document.getElementById("pass2").value;
+                if(!(pass==passRepeated))
+                {
+                    document.getElementById("div1").innerHTML = "Password does not match"
+                    return;                    
+                }
+                else
+                {
+                    document.getElementById("div1").innerHTML = ""
+                    return;     
+                }
+            }
+    </script>
+</head>
+<body>
+    <div style="width:100%;height:100px;background-color:black">
+        <span style="color:white"> First Northen bank </span>
+        <img />
+    </div>
+    <div 
+        style="width:20%;height:500px;background-color:red;float:left">
+    </div>
+    <div style="width:60%;height:500px;background-color:wheat;float:left">
+        <h2>New User Registration</h2>
+    	<p>
+        	In oreder to use FNB's All day Banking services ,please complete the 			folowing details,and then press the submit button to complete the 		Registration.. 
+    	</p>
+        <form id="ff1">
+            <table>
+                <tr>
+                    <td><label for="lastname">last name : </label></td>
+                    <td> <input type="text" name="last name" id="lastname" /></td>
+                </tr>
+
+                <tr>
+                    <td><label for="firstname">First name : </label></td>
+                    <td> <input type="text" name="fname" id="firstname"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="usrid">Your preferred userid:</label></td>
+                    <td><input type="text" name="userid" id="usrid"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="email">Email Address : </label></td>
+                    <td><input type="text" name="email_id" id="email"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="accno">Account Number : </label></td>
+                    <td><input type="number" min="8000000" max="9000000" name="acc" id="accno"></td>
+                </tr>
+                
+                <tr>
+                    <td><label for="c_cardNo">Credit card Number : </label></td>
+                    <td><input type="text" name="CC_CardNO" id="c_cardNo"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="pass">Online Password : </label></td>
+                    <td><input type="password" name="Opass" id="pass1" oninput="checkPassValidity()"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><div id="div1" style="color: red;"></div></td>
+                </tr>
+
+                <tr>
+                    <td><label for="pass">Online Password (repeated): </label></td>
+                    <td><input type="password" name="Opass" id="pass2" oninput="checkPassMatch()"></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="button" onclick="validate()" value="Submit">
+                        <input type="reset" value="Clear">
+                    </td>
+                </tr>
+        
+        
+            </table>
+
+
+        </form>
+    </div>
+    <div style="width:20%;height:500px;background-color:red;float:left">
+
+    </div>
+
+
+</body>
+</html>

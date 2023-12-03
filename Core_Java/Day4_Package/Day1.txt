@@ -1,0 +1,6 @@
+>show dbs
+
+>show collections
+
+> db.movie.find().pretty()
+

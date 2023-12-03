@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Slide Show</title>
+    <script>
+        var arr = ["3919977.jpg","hongkong-2680864_1920.jpg","nick.jpg","3919944.jpg"]
+        var index=0;
+
+        function previousImg()
+        {
+            if(index==0)
+                index=arr.length-1;
+            else
+                index--;
+
+            document.getElementById("myimg").src = arr[index]
+        }
+        function nextImg()
+        {
+            if(index==arr.length-1)
+                index=0;
+            else
+                index++;
+
+            document.getElementById("myimg").src = arr[index];
+        }
+        function startSlShow()
+        {
+            nextImg()
+            f = setTimeout(startSlShow, 1000)
+        }
+        function stopSlideshow()
+        {
+            clearTimeout(f)
+        }
+    </script>
+</head>
+<body>
+    
+    <img src="3919977.jpg" height="300" width=500 id="myimg"/>
+    <br/>
+    <button onclick="previousImg()"> prev </button>
+    <button onclick="nextImg()"> Next>> </button>
+
+    <br/>
+    <button onclick="startSlShow()">Start SlideShow</button>
+    <button onclick="stopSlideshow()">Stop SlideShow</button>
+    
+</body>
+</html>

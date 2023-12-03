@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkPrime(num)
+        {
+
+            if(num<2)
+                return false;
+            
+            for(i=2; i<=num/2; i++)
+            {
+                if(num%i==0)
+                    return false;
+            }
+
+            return true;
+        }
+        num=6
+        document.write("Is "+num+" is prime:"+checkPrime(num));
+    </script>
+    
+
+</body>
+</html>

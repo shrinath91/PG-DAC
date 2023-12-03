@@ -164,7 +164,7 @@ mysql> update employee set job='Analyst' where ename in('Sarita','Jitesh');
 
 mysql> update employee set job='Manager' where job not in('Head Clerk','Analyst');
 
-99999999999999999999999999999999999999999999999a99999999999999999999999999999999999
+99999999999999999999999999999999999999999999999999999999999999999999999999999999999
 1. mysql> select * from emp where sal between 500 and 2000;
 2. mysql> select * from emp where sal in (1250,3350,1350);
 3. mysql> select * from emp where sal>2000 and comm>200;

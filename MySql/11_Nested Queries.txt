@@ -608,7 +608,8 @@ group by deptno;
 |        3 |
 +----------+
 
-
+77777777777777777777777777777777777777777
+joins
 1--------------------------------
 select d.deptno, d.dname
 from dept d
@@ -662,13 +663,197 @@ constraint fk_cid1 foreign key(cid) references category(cid) on delete set null,
 constraint fk_sid foreign key(sid) references salesman(sid) 	
 );
 
+==============================================================================
+1.
+select d.deptno, d.dname
+from dept d
+where d.deptno not in(select deptno from emp e where e.deptno=d.deptno);
+
+select d.deptno, d.dname
+from dept d
+where not exists(select deptno from emp e where e.deptno=d.deptno);
++--------+------------+
+| deptno | dname      |
++--------+------------+
+|     40 | OPERATIONS |
++--------+------------+
+
+
+2.
+select * from emp
+where not exists(select deptno from dept where dept.deptno=emp.deptno);
++-------+--------+----------+------+----------+---------+------+--------+
+| EMPNO | ENAME  | JOB      | MGR  | HIREDATE | SAL     | COMM | DEPTNO |
++-------+--------+----------+------+----------+---------+------+--------+
+|  7999 | Daulat | Salesman | 7499 | NULL     | 2000.00 | NULL |   NULL |
++-------+--------+----------+------+----------+---------+------+--------+
+
+4.
+select * 
+from emp
+where sal> 	(select min(sal)
+       		from emp
+		where job='MANAGER');
++-------+-------+-----------+------+------------+---------+------+--------+
+| EMPNO | ENAME | JOB       | MGR  | HIREDATE   | SAL     | COMM | DEPTNO |
++-------+-------+-----------+------+------------+---------+------+--------+
+|  7566 | JONES | MANAGER   | 7839 | 1981-04-02 | 3599.75 | NULL |     20 |
+|  7698 | BLAKE | MANAGER   | 7839 | 1981-05-01 | 3448.50 | NULL |     30 |
+|  7788 | SCOTT | ANALYST   | 7566 | 1982-12-09 | 3630.00 | NULL |     20 |
+|  7839 | KING  | PRESIDENT | NULL | 1981-11-17 | 6050.00 | NULL |     10 |
+|  7902 | FORD  | ANALYST   | 7566 | 1981-12-03 | 3630.00 | NULL |     20 |
++-------+-------+-----------+------+------------+---------+------+--------+
+
+5.
+select *
+from emp e1
+where sal > (select sal from emp e2 where e1.mgr=e2.empno);
++-------+--------+----------+------+------------+---------+------+--------+
+| EMPNO | ENAME  | JOB      | MGR  | HIREDATE   | SAL     | COMM | DEPTNO |
++-------+--------+----------+------+------------+---------+------+--------+
+|  7788 | SCOTT  | ANALYST  | 7566 | 1982-12-09 | 3630.00 | NULL |     20 |
+|  7902 | FORD   | ANALYST  | 7566 | 1981-12-03 | 3630.00 | NULL |     20 |
+|  7999 | Daulat | Salesman | 7499 | NULL       | 2000.00 | NULL |   NULL |
++-------+--------+----------+------+------------+---------+------+--------+
+
+6.
+select * 
+from emp e1
+where hiredate < (select hiredate from emp e2 where e1.mgr=e2.empno);
++-------+-------+----------+------+------------+---------+--------+--------+
+| EMPNO | ENAME | JOB      | MGR  | HIREDATE   | SAL     | COMM   | DEPTNO |
++-------+-------+----------+------+------------+---------+--------+--------+
+|  7369 | SMITH | CLERK    | 7902 | 1980-12-17 |  968.00 |   NULL |     20 |
+|  7499 | ALLEN | SALESMAN | 7698 | 1981-02-20 | 1936.00 | 300.00 |     30 |
+|  7521 | WARD  | SALESMAN | 7698 | 1981-02-22 | 1512.50 | 500.00 |     30 |
+|  7566 | JONES | MANAGER  | 7839 | 1981-04-02 | 3599.75 |   NULL |     20 |
+|  7698 | BLAKE | MANAGER  | 7839 | 1981-05-01 | 3448.50 |   NULL |     30 |
+|  7782 | CLARK | MANAGER  | 7839 | 1981-09-06 | 2964.50 |   NULL |     10 |
++-------+-------+----------+------+------------+---------+--------+--------+
+
+------------------------------------------------------------------------------
+1.
+create table faculty
+(
+fid int primary key,
+fname varchar(20) not null,
+sp_skill1 varchar(30),
+sp_skill2 varchar(30)
+);
+
+
+insert into faculty values
+(10,'Amol','DBT','JAVA'),
+(11,'Asha','JAVA','MySQL'),
+(12,'Kiran','CPP','DBT'),
+(13,'Seeta','MySQL','DBT');
+
+2.
+create table room 
+(
+rid int primary key,
+rname varchar(15) not null,
+rloc varchar(20)
+);
+
+insert into room values
+(100,'Jasmin','1st floor'),
+(101,'Rose','2nd floor'),
+(105,'Lotus','1st floor'),
+(103,'Mogra','1st floor');
+
+
+create table courses
+(
+cid int primary key,
+cname varchar(15) not null,
+rid int,
+fid int,
+foreign key(rid) references room(rid) on delete set null,
+foreign key(fid) references faculty(fid) on delete set null
+);
+
+
+insert into courses values
+    (121,'DBDA',100,10),
+    (131,'DAC',101,null),
+    (141,'DTISS',null,null),
+    (151,'DIOT',105,12);
+
+----
+mysql> table faculty;
++-----+-------+-----------+-----------+
+| fid | fname | sp_skill1 | sp_skill2 |
++-----+-------+-----------+-----------+
+|  10 | Amol  | DBT       | JAVA      |
+|  11 | Asha  | JAVA      | MySQL     |
+|  12 | Kiran | CPP       | DBT       |
+|  13 | Seeta | MySQL     | DBT       |
++-----+-------+-----------+-----------+
+
+
+mysql> table room;
++-----+--------+-----------+
+| rid | rname  | rloc      |
++-----+--------+-----------+
+| 100 | Jasmin | 1st floor |
+| 101 | Rose   | 2nd floor |
+| 103 | Mogra  | 1st floor |
+| 105 | Lotus  | 1st floor |
++-----+--------+-----------+
+
+
+mysql> table courses;
++-----+-------+------+------+
+| cid | cname | rid  | fid  |
++-----+-------+------+------+
+| 121 | DBDA  |  100 |   10 |
+| 131 | DAC   |  101 | NULL |
+| 141 | DTISS | NULL | NULL |
+| 151 | DIOT  |  105 |   12 |
++-----+-------+------+------+
+1.
+Select c.rid,c.cname From courses c where rid is null 
+UNION
+Select r.rid,r.rname from room r where NOT EXISTS(Select c.rid from courses c where
+c.rid = r.rid );
 
 
 
+2.
+select * 
+from faculty f
+where not exists(select c.fid from courses c where f.fid=c.fid);
++-----+-------+-----------+-----------+
+| fid | fname | sp_skill1 | sp_skill2 |
++-----+-------+-----------+-----------+
+|  11 | Asha  | JAVA      | MySQL     |
+|  13 | Seeta | MySQL     | DBT       |
++-----+-------+-----------+-----------+
 
+3.
+select *
+from room r
+where exists(select c.rid from courses c where c.rid=r.rid);
 
+4.
+select *
+from room r
+where not exists(select c.rid from courses c  where c.rid=r.rid);
++-----+-------+-----------+
+| rid | rname | rloc      |
++-----+-------+-----------+
+| 103 | Mogra | 1st floor |
++-----+-------+-----------+
 
-
-
-
-
+5.
+select *
+from courses c
+join faculty f
+on f.fid=c.fid and (sp_skill1='DBT' or sp_skill2='DBT');
++-----+-------+------+------+-----+-------+-----------+-----------+
+| cid | cname | rid  | fid  | fid | fname | sp_skill1 | sp_skill2 |
++-----+-------+------+------+-----+-------+-----------+-----------+
+| 121 | DBDA  |  100 |   10 |  10 | Amol  | DBT       | JAVA      |
+| 151 | DIOT  |  105 |   12 |  12 | Kiran | CPP       | DBT       |
++-----+-------+------+------+-----+-------+-----------+-----------+

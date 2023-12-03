@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5_express_registration</title>
+</head>
+<body>
+    <div style="border: 2px; border-color:black; border-style: solid; width: 600px;">
+        <p style="color: red;"><i>Express Registration</i></p>
+
+        <p>Please note that all fields that have an asterisk(*) are required to process your registration</p>
+
+        <div>
+            <form method="get">
+                <table border="0" style="border-collapse: collapse; border-color: white;">
+                    <tr style="background-color: grey; border-collapse:collapse ;" >
+                        <td style="color: aliceblue;" colspan="2">Personal Details</td>
+                        <td style="color: aliceblue;" colspan="2">Address</td>
+                    </tr>
+                    <!-- title -->
+                    <tr>
+                        <td><label for="ttl">Title: </label></td>
+                        <td><input type="text" name="title" id="ttl" style="background-color: rgb(203, 221, 227);"/><br/>(Mr/Mrs/Miss)</td>
+                        <td><label for="add">Address:</label></td>
+                        <td><input type="text" name="address" id="add1" style="background-color: rgb(203, 221, 227);" /> *</td>
+                    </tr>
+                    <!-- first name -->
+                    <tr>  
+                        <td><label for="fname">First Name:</label></td>
+                        <td><input type="text" name="fname" id="fname" style="background-color: rgb(203, 221, 227);" /><br/>*</td>
+                        <td></td>
+                        <td><input type="text" name="address" id="add2" style="background-color: rgb(203, 221, 227);" /></td>
+                    </tr>
+                    <!-- last name -->
+                    <tr>
+                        <td><label for="lname">Last Name:</label></td>
+                        <td><input type="text" name="lname" id="lname" style="background-color: rgb(203, 221, 227);" /><br/>*</td>
+                        <td><label for="twn">Town:</label></td>
+                        <td><input type="text" name="twn" id="twn" style="background-color: rgb(203, 221, 227);" /> *</td>
+                    </tr>
+                    <!-- email -->
+                    <tr>
+                        <td><label for="eml">Email Address:</label></td>
+                        <td><input type="text" name="eml" id="eml" style="background-color: rgb(203, 221, 227);" /></td>
+                        <td><label for="Cntry">Country/State:</label></td>
+                        <td><input type="text" name="Cntry" id="Cntry" style="background-color: rgb(203, 221, 227);" /> *</td>
+                    </tr>
+                    <!-- telephone -->
+                    <tr>
+                        <td><label for="tel">Telephone:</label></td>
+                        <td><input type="text" name="tel" id="tel" style="background-color: rgb(203, 221, 227);" ></td>
+                        <td><label for="cntry1">Country:</label></td>
+                        <td>
+                            <select name="Country" style="background-color: rgb(203, 221, 227);" >
+                                <option value="Ind">India</option>
+                                <option value="Usa">America</option>
+                                <option value="Uae">UAE</option>
+                            </select> *
+                        </td>
+                    </tr>
+                    <!-- cell phone -->
+                    <tr>
+                        <td><label for="cell">Cell Phone:</label></td>
+                        <td><input type="number" name="cell"  id="cell" style="background-color: rgb(203, 221, 227);" /></td>
+                        <td><label for="pstcode">PostCode:</label></td>
+                        <td><input type="number" name="pstcode" id="pstcode" style="background-color: rgb(203, 221, 227);" /> *</td>
+                    </tr>
+                    <!-- comment -->
+                    <tr>
+                        <td><label for="comment">Comment: </label></td>
+                        <td colspan="3">
+                            <textarea name="comment" id="comment" cols="50" rows="5" style="background-color: rgb(203, 221, 227);" ></textarea>
+                        </td>
+                    </tr>
+                    <!-- feedback -->
+                    <tr style=" border: 4px; border-color: aquamarine; border-style: solid;">
+                        <td><label for="feedback">Feedback:</label></td>
+                        <td><input type="text" name="feedback" id="feedback" style="background-color: rgb(203, 221, 227);" /></td>
+                        <td>Hear us from?</td>
+                        <td>
+                            <input type="checkbox" name="c1" value="Friend">Friend
+                            <input type="checkbox" name="c2" id="Site Owner">Site Owner
+                            <br/>
+                            <input type="checkbox" name="c3" value="Search Engine">Search Engine
+                        </td>
+                    </tr>
+                    <!-- Security details -->
+                    <tr>
+                        <td colspan="4" bgcolor="grey" style="color: aliceblue;"> Security Details</td>
+                    </tr>
+                    <tr>
+                        <td><label for="pass1">Choose Password:</label></td>
+                        <td><input type="password" name="pass1" id="pass1" style="background-color: rgb(203, 221, 227);" /> <br/>*</td>
+                        <td><label for="pass2">Confirm Password:</label></td>
+                        <td><input type="password" name="pass1" id="pass2" style="background-color: rgb(203, 221, 227);"    > *</td>
+                    </tr>
+                </table>
+             </form>
+        </div>
+    </div>
+    
+</body>
+</html>

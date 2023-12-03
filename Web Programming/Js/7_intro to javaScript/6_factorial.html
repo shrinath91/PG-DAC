@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function factorial(num)
+        {
+            var fact=1;
+            for(i=2; i<=num; i++)
+            {
+                fact*=i;
+            }
+        //    return fact;
+           document.getElementById("f").innerHTML=fact;
+        }
+        //document.write(factorial(5));
+    </script>
+</head>
+<body>
+    <form>
+        <table>
+            <tr ><td colspan="2"><b>Calculate factorial</b></td></tr>
+            <tr>
+                <td><label for="num1">Eneter Number: </label></td>
+                <td><input type="number" name="num" id="num1"></td>
+            </tr>
+            <tr align="center">
+                <td colspan="2"><input type="button" value="Calculate" onclick="factorial(num.value)"></td>
+                
+            </tr>
+            
+        </table>
+    </form>
+    <div id="f"></div>
+    
+
+</body>
+</html>

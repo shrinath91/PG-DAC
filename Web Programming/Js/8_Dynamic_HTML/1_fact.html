@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Factorial</title>
+    <script>
+        function Factorial(num)
+        {
+            fact=1;
+            for(var i=2; i<=num; i++)
+            {
+                fact*=i;
+            }
+            document.getElementById("ans").innerHTML="<br/>Factorial of "+num+" is "+fact;
+        }
+    </script>
+</head>
+<body>
+        <form method="get">
+            <table border="2" align="center" style="background-color: rgb(212, 78, 29);">
+                <tr>
+                    <td><label for="num1">Enter Number: </label></td>
+                    <td><input type="number" name="num" id="num1"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="Factorial" onclick="Factorial(num.value)"></td>
+                    <td></td>
+                </tr>
+            </table>
+        </form>
+
+        <div id="ans" style="text-align: center;"></div>
+  
+    
+</body>
+</html>

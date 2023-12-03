@@ -1,0 +1,206 @@
+1.
+delimiter #
+create procedure avg_sal()
+begin
+	select avg(sal)
+	from emp;
+end#
+delimiter ;
+mysql> call avg_sal();
++-------------+
+| avg(sal)    |
++-------------+
+| 2474.683333 |
++-------------+
+
+2.
+delimiter #
+create procedure avg_sald20()
+begin
+	select avg(sal)
+	from emp
+	where deptno=20;
+end#
+delimiter ;
+
+mysql> call avg_sald20;
++-------------+
+| avg(sal)    |
++-------------+
+| 2631.750000 |
++-------------+
+
+3/.
+delimiter #
+create procedure avg_sal1(in d int)
+begin
+	select avg(sal)
+	from emp
+	where deptno=d;
+end#
+delimiter ;
+
+mysql> call avg_sal1(@k);
++-------------+
+| avg(sal)    |
++-------------+
+| 2631.750000 |
++-------------+
+
+4.
+/////////////////////////////////////////////////using while
+drop procedure if exists fact;
+delimiter #
+create procedure fact(in num int)
+begin
+	declare temp int;
+	set temp=1;
+	while num>0 
+	do
+	  set temp=temp*num;
+	  set num=num-1;
+	end while;
+	select temp;
+
+end#
+delimiter ;
+
+mysql> call fact(5);
++------+
+| temp |
++------+
+|  120 |
++------+
+	
+
+/////////////////////////////////////////////////using loop
+delimiter #
+create procedure fact(in num int)
+begin
+	declare temp int;
+	set temp=1;
+	label:loop
+	  if num>1 then
+		set temp=temp*num;
+		set num = num-1;
+	  else
+		leave label;
+	  end if;
+	end loop label;
+	select temp;
+end#
+delimiter ;
+
+mysql> call fact(5);
++------+
+| temp |
++------+
+|  120 |
++------+
+
+5.
+drop procedure if exists prime1; 
+delimiter //
+create procedure prime1(in num int)
+begin
+	declare div1 int;
+	declare flag int;
+
+	set div1=2;
+	set flag=1;
+
+	if num<2 then 
+		select 0 as Prime;
+	else 
+		while(div1<=num/2) do
+			if num % div1= 0 then
+			 set flag=0;
+			end if;
+			
+			set div1=div1+1;
+		end while;
+		select flag as 'Prime';
+	end if;
+end //
+delimiter ;
+
+call prime1(5);
+
+
+6.
+drop procedure if exists search_emp;
+delimiter #
+create procedure search_emp(in no int)
+begin
+	declare msg varchar(30);
+	declare flag int;
+	declare temp int;
+	set flag=0;
+	
+
+	select empno into temp
+	from emp
+	where empno=no;
+
+	if temp=no then 
+	   set msg="Employee Found";
+	else
+	   set msg="Unknown Number";
+	end if;
+
+	select msg;
+end#
+delimiter ;
+
+mysql> call search_emp(7369);
++----------------+
+| msg            |
++----------------+
+| Employee Found |
++----------------+
+
+mysql> call search_emp(7769);
++----------------+
+| msg            |
++----------------+
+| Unknown Number |
++----------------+
+			
+		
+7.
+
+delimiter #
+create procedure chng_sal(in e int, in s int)
+begin
+	update emp
+	set sal=s
+	where empno=e;
+end#
+delimiter ;
+mysql> call chng_sal(7999, 3000);
+
++-------+--------+-----------+------+------------+---------+---------+--------
+| EMPNO | ENAME  | JOB       | MGR  | HIREDATE   | SAL     | COMM    | DEPTNO |
++-------+--------+-----------+------+------------+---------+---------+--------
+|  7999 | Daulat | Salesman  | 7499 | NULL       | 3000.00 |    NULL |   NULL 
++-------+--------+-----------+------+------------+---------+---------+--------
+
+8.
+
+delimiter #
+create procedure inrt_row(in mempno int ,in mename varchar(10), in mjob varchar(10), in msal int)
+begin
+	insert into emp(empno,ename,job,sal)
+	values(mempno,mename,mjob,msal);
+end#
+delimiter ;
+
+mysql> call inrt_row(9999,'Kunal','CEO',3000);
+	
+
+
+
+
+
+
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script>
+        function validate()
+        {
+            // var uid=document.getElementById("uidtext3").value;
+            var uid= document.f1.uidt.value;
+            var uidpattern = /^[\w.-]{8,15}$/;
+            if( !uidpattern.test(uid))
+            {
+                document.getElementById("uiderror").innerHTML = 'uid length should be 8-15 chars';
+                document.getElementById("uidtext3").value = "";
+                document.getElementById("uidtext3").focus();
+            }
+            else
+            {
+                document.getElementById("uiderror").innerHTML = "";
+            }
+
+            //pass
+            var pwd = document.getElementById("passtext3").value;
+            // var passPattern = //;
+            if(pwd.length<10 || pwd.length>15)
+            {
+                document.getElementById("passerror").innerHTML = "pwd length should be 10-15 chars";
+                document.f1.passt.value="";
+                document.f1.passt.focus();
+                return;
+            }
+            else
+            {
+                document.getElementById("passerror").innerHTML = "";
+            }
+
+            // gender
+            if(document.f1.gender.value=='')
+                alert("Please select gender!!")
+            
+            
+            document.f1.submit();
+        }
+    </script>
+</head>
+<body>
+    
+    <form method="get" name="f1">
+        <br/>
+        Enter Uid: 
+        <input type="text" id="uidtext3" name="uidt"/>
+        <span id="uiderror" style="color: red;"></span>
+        <br/>
+
+        Enter password: 
+        <input type="text" name="passt" id="passtext3"/>
+        <span id="passerror" style="color: red;"></span>
+        <br/>
+
+        Gender: 
+        <input type="radio" name="gender" value="Male" id="gender"/>M
+        <input type="radio" name="gender" value="Female" id="gender"/>F
+        <br/>
+        <input type="button" value="Login" onclick="validate()"/>
+        <input type="reset" value="Clear">
+    </form>
+</body>
+</html>

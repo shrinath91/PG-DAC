@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function calLength(str)
+            {
+                len = str.length
+                document.getElementById("leng").placeholder = len
+            }
+
+
+        str='Daulat Rattan'
+        document.write(str)
+        len = str.length;
+        document.write('<br/>Length: '+len)
+        document.write('<br/>Upper Case: '+str.toUpperCase())
+        document.write('<br/>Lower Case: '+str.toLowerCase())
+        document.write('<br/>t found from start: '+str.indexOf("t"))
+        document.write('<br/>t found from END: '+str.lastIndexOf("t"))
+        document.write('<br/>Letter at Index 4: '+str.charAt(4))
+        document.write('<br/>Ascii of Letter at Index 4: '+str.charCodeAt(4))
+
+        str1='Welome'
+        str2=' To the wolrd of Web Programming'
+        document.write('<br/>str1: '+str1)
+        document.write('<br/>str2: '+str2)
+        str3=str1.concat(str2);
+        document.write('<br/>concat: '+str3)
+        
+        str3 = str3.split(" ")
+        document.write('<br/>Split Spcae: '+str3)
+
+
+
+
+        
+    </script>
+</head>
+<body>
+    <hr/>
+    <label for="stra">Enter a string: </label>
+    <input type="text" name="str" id="stra">
+
+    <br/>
+    <input placeholder="0" id="leng"></input>
+    <button onclick="calLength(stra.value)">CalculateLength</button>
+
+
+
+    
+</body>
+</html>

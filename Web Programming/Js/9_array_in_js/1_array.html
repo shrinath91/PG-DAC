@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>1_array</title>
+        
+    <SCript>
+        var arr=[];
+        // for(var i=0; i<5; i++)
+        // {
+        //     arr[i] = prompt("Enter Number"); 
+        // }
+            
+        arr = [10,81,30,80,50,95]
+        document.write("<br/>Array:")        
+        document.write(arr.toString())
+        
+        // document.write("<p>Ordered list of Array elements</p><ol>");
+            // for(var i=0; i<arr.length; i++)
+        // {
+            //     document.write("<li>");
+                //     document.write(arr[i]);
+        //     document.write("</li>");
+        // }
+        // document.write("</ol>");
+        
+        // document.write("<p>Ordered list of Array elements</p><ol type='a'>");
+        // for(i in arr)
+        // {
+        //     document.write("<li>")
+        //     document.write(arr[i])
+        //     document.write('</li>')
+        // }
+        // document.write("</ol>");
+        
+        // document.write("<p>Ordered list of Array elements</p><ol type='a'>");
+            // for(element of arr)
+        // {
+            //     document.write("<li>")
+                //     document.write(element)
+                //     document.write('</li>')
+        // }
+        // document.write("</ol>");
+        
+        arr.sort()
+        function mysort(a,b)
+        {
+            return a-b
+        }
+        arr.sort(mysort)
+        document.write("<br/>Sorted Array:")        
+        document.write(arr.toString()) 
+        
+
+        arr = [10,81,30,80,50,95]
+        function searchNum(num)
+        {
+            var a=-1
+            for(i=0; i<arr.length; i++)
+            {
+                if(num==arr[i])
+                {
+                    a=i
+                    break
+                }
+            }
+            document.getElementById("ind").innerHTML=a
+            
+        }
+        
+
+
+        //////////////////////////////////////////////
+        document.write('<br/>*****************Assignment 3*********************8</br>')
+        arr = [10,81,30,80,50,95]
+        document.write("Array:")        
+        document.write(arr.toString())
+        
+        arr.sort(mysort);
+        document.write("<br/>Sorted with named function <br/>Array: ")        
+        document.write(arr.toString())
+
+
+        arr = [10,81,30,80,50,95]
+        document.write("<br/><br/>Array:")        
+        document.write(arr.toString())
+        
+        arr.sort(function(a,b){return a-b});
+        document.write("<br/>Sorted with Annonymous Function <br/>Array: ")        
+        document.write(arr.toString())
+
+
+        arr = [10,81,30,80,50,95]
+        document.write("<br/><br/>Array:")        
+        document.write(arr.toString())
+        
+        arr.sort((a,b)=> a-b);
+        document.write("<br/>Sorted with Arrow Function <br/>Array: ")        
+        document.write(arr.toString())
+
+
+
+        document.write('<br/><br/>*****************Assignment 4*********************</br>')
+        arr = [10,81,30,80,50,95]
+        document.write("<br/><br/>Array:")        
+        document.write(arr.toString())
+
+        function myDisp(v)
+        {
+            document.write('<li>'+v+'</li>')
+        }
+        
+        document.write('<br/>foreach using named function:<br/>')
+        document.write('<ul>')
+        arr.forEach(myDisp);
+        document.write('</ul>')
+        document.write('<br/>')
+
+       
+        document.write('<br/>foreach using Annonymous function:<br/>')
+        document.write('<ul>')
+        arr.forEach(function(v){document.write('<li>'+v+'</li>')});
+        document.write('</ul>')
+        document.write('<br/>')
+
+
+        document.write('<br/>foreach using Arrow function:<br/>')
+        document.write('<ul>')
+        arr.forEach(v=>document.write('<li>'+v+'</li>'));
+        document.write('</ul>')
+        document.write('<br/>')
+
+        document.write('<br/><br/>*****************Assignment 5*********************</br>')
+        arr = [1,2,8,2,8,50,5]
+        document.write("<br/><br/>Array:")        
+        document.write(arr.toString())
+
+        var sum = arr.reduce((acc,value)=>acc+value);////
+        document.write('<br/>Sum:'+sum);
+
+        var avg = sum/arr.length;
+        document.write('<br/>Avg: '+avg)
+
+        function findMax(num1, num2)////
+        {
+            return num1>num2?num1:num2;
+        }
+        var max=arr.reduce(findMax);
+        document.write('<br/>Max: '+max)
+
+        var min = arr.reduce((acc, val) => acc>val?val:acc)////
+        document.write('<br/>Min: '+min)
+
+        document.write('<br/><br/>*****************Assignment 5*********************</br>')
+        arr = [1,2,8,2,8,50,5]//all not even
+        document.write("<br/><br/>Array:")        
+        document.write(arr.toString())
+
+        var flag = arr.every(v=>v%2==0)
+        document.write('<br/>All Values are even? :'+flag)
+
+        arr = [4,2,8,2,8,50,6]///all even
+        document.write("<br/><br/>Array:")        
+        document.write(arr.toString())
+
+        var flag = arr.every(v=>v%2==0)
+        document.write('<br/>All Values are even? :'+flag)
+
+        arr = [1,2,8,2,8,50,5]//all not even
+        document.write("<br/><br/>Array:")        
+        document.write(arr.toString())
+        flag = arr.every(v=>v%2!=0) 
+        document.write('<br/>All Values are odd? '+flag)
+
+
+        arr = [3,5,7,9,7,5,3]///all odd
+        document.write("<br/><br/>Array:")        
+        document.write(arr.toString())
+        flag = arr.every(function(v){return v%2!=0})
+        document.write('<br/>All Values are odd? :'+flag)
+
+        document.write('<br/><br/>*****************Assignment 5*********************</br>')
+        arr = [3,5,7,9,7,5,3]//not prime
+        document.write("<br/><br/>Array:")        
+        document.write(arr.toString())
+
+        function isPrime(num)
+        {
+            if(num<2)
+                return false;
+            for(i=2;i<=num/2;i++)
+            {
+                if(num%i==0)
+                    return false;
+            }
+            return true;
+        }
+        flag = arr.every(isPrime)
+        document.write('<br/>Is all elements prime: '+flag)
+
+        arr = [3,5,7,17,7,5,3]//prime
+        document.write("<br/><br/>Array:")        
+        document.write(arr.toString())
+        flag = arr.every(isPrime)
+        document.write('<br/>Is all elements prime: '+flag)
+
+        document.write('<br/><br/>*****************Assignment 5*********************</br>')
+        arr = [3,2,7,4,7,8,3,12,18]
+        document.write("<br/><br/>Array:")        
+        document.write(arr.toString())
+
+        var evenArr = arr.filter(v=>v%2==0);
+        document.write('<br/>Even array: '+evenArr);
+        
+        var oddArr = arr.filter(v=>v%2!=0);
+        document.write('<br/>Odd array: '+oddArr);
+
+
+
+    </SCript>
+</head>
+<body>
+    <br/>
+    <br/>
+    <br/>   
+    <br/>
+    <br/>
+    arr = [10,81,30,80,50,95]<br/>
+
+    <label for="n1">Enter Number to be searched:</label>
+    <input type="number" name="num" id="n1" />
+    <button onclick="searchNum(n1.value)">Search</button>
+    <div id="ind"></div>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function startScrollRignt()
+        {
+            var imgNode = document.getElementById("img1");
+            var le = parseInt(imgNode.style.left)+20;
+            if(le > window.innerWidth)
+                startScrollLeft();
+            imgNode.style.left = le+"px";
+            flag1 = setTimeout(startScrollRignt, 80);
+        }
+
+        function startScrollLeft()
+        {
+            var imgNode = document.getElementById("img1");
+            var le = parseInt(imgNode.style.left)-20    ;
+            if(le < 0)
+            {
+                startScrollRignt();
+            }
+            imgNode.style.left = le+"px";
+            flag2 = setTimeout(startScrollLeft, 80);
+        }
+
+        function stopScroll()
+        {
+            clearTimeout(flag1);
+            clearTimeout(flag2);
+        }
+    </script>
+</head>
+<body>
+    <img id="img1" src="3919944.jpg"  width="500" height="300" style="position: absolute; top: 100px; left: 0px;" onclick="startScrollRignt()" onmouseover="stopScroll()">    
+</body>
+</html>

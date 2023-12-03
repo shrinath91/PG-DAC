@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<head>
+    
+    <title>OOP concept</title>
+</head>
+<body>
+    <h2><a id="Menu"><b>Menu</b></a></h2>
+    <h3><a href="#OOP">move to OOP Concept</a></h3>
+    <h3><a href="#inter">move to Interfaces</a></h3>
+    <h3><a href="#excp">move to Exception Handling</a></h3>
+    <h3><a href="#inst">move to Use of instanceOf operator</a></h3>
+    <!---->
+    <a id="OOP"></a>
+    <h1  style="color:rgb(62, 163, 107);"> OOP Concept</h1>
+    <p>In this page, we will learn about the basics of OOPs. Object-Oriented Programming is a paradigm that provides many concepts, such as inheritance, data binding, polymorphism, etc.
+
+        Simula is considered the first object-oriented programming language.<br/> The programming paradigm where everything is represented as an object is known as a truly object-oriented programming language.
+        
+        Smalltalk is considered the first truly object-oriented programming language.
+        
+        The popular object-oriented languages are Java, C#, PHP, Python, C++, etc.</p>
+
+       1. Object<br/>
+       2. Class<br/>
+       3. Inheritance<br/>
+       4. Polymorphism<br/>
+       5. Abstraction<br/>
+       6. Encapsulation<br/>
+
+       <p>Object-Oriented Programming (OOP) Concepts:<br/>
+        1. Type Theory in OOP:<br/><br/>
+        In OOP, type theory revolves around the idea of defining and manipulating types of objects.
+        Classes and Objects: Classes act as blueprints for creating objects, defining their properties and behaviors.
+        Inheritance: Types are related through inheritance, allowing a subclass to inherit properties and behaviors from a superclass.
+        Polymorphism: Types can exhibit multiple forms through polymorphism, enabling objects of different types to be treated uniformly.
+        2. Abstraction:<br/><br/>
+        Abstraction allows the representation of essential features while hiding unnecessary details.
+        Abstract classes and interfaces facilitate the creation of abstract types, providing a foundation for concrete implementations.
+        3. Encapsulation:<br/><br/>
+        Encapsulation involves bundling data and methods that operate on the data into a single unit, known as a class.
+        Access modifiers control the visibility of members, enforcing encapsulation and data hiding.
+        4. Polymorphism:<br/><br/>
+        Polymorphism allows objects of different types to be treated as objects of a common base type.
+        Method overriding enables dynamic dispatch, where the appropriate method is invoked at runtime based on the actual object type.</p>
+
+        <!---->
+        <a id="inter"></a>
+       <h1 style="color: rgb(62, 163, 107);">Interfaces</h1>
+       <p>An Interface in Java programming language is defined as an abstract type used to specify the behavior of a class. An interface in Java is a 
+           blueprint of a behavior. A Java interface contains static constants and abstract methods.</p>
+   
+       <h2>What are Interfaces in Java?</h2>
+       <p>The interface in Java is a mechanism to achieve abstraction. There can be only abstract methods in the Java interface, not the method body. 
+           It is used to achieve abstraction and multiple inheritances in Java using Interface. In other words, you can say that interfaces can have 
+           abstract methods and variables. It cannot have a method body. Java Interface also represents the IS-A relationship.</p>
+        
+        <!---->
+        <a id="excp"></a>
+        <h1 style="color: rgb(62, 163, 107);">Exception Handling</h1>
+        <p>The <b>Exception Handling in Java </b> is one of the powerful mechanism to handle the runtime errors so that the normal flow of the application can 
+            be maintained.</p>
+    
+        <p>In this tutorial, we will learn about Java exceptions, it's types, and the difference between checked and unchecked exceptions.</p>
+        1. Defining Contracts:<br/>
+        Interfaces declare a set of methods that implementing classes must define, establishing a contract.
+        Classes implementing an interface adhere to the specified structure, promoting consistency.<br/><br/>
+        2. Multiple Inheritance:<br/>
+        Interfaces enable a form of multiple inheritance, allowing a class to implement multiple interfaces.
+        This promotes flexibility and code reuse without the issues associated with multiple inheritance in class-based languages.<br/><br/>
+        3. Polymorphism and Abstraction:<br/>
+        Interfaces support polymorphism by allowing objects of different classes to be treated as instances of the interface.
+        They provide a level of abstraction, allowing code to interact with objects based on their common interface.
+        In summary, the type theory in OOP, exception handling, the instanceof operator, and the use of interfaces collectively contribute to creating robust, modular, and flexible software systems. They provide a foundation for code organization, error handling, type checking, and the implementation of design principles like encapsulation and polymorphism.
+
+
+
+
+
+
+
+        <p><h2>What is Exception in Java?</h2> <br/>
+        Dictionary Meaning: Exception is an abnormal condition.</p>
+        <p><b>What is Exception Handling?</b> <br/>
+            Exception Handling is a mechanism to handle runtime errors such as ClassNotFoundException, IOException, SQLException, RemoteException, etc.</p>
+
+        <p>Advantage of Exception Handling<br/>
+            The core advantage of exception handling is to maintain the normal flow of the application. An exception normally disrupts the normal flow of the application; that is why we need to handle exceptions. Let's consider a scenario:</p>
+
+        <p>Suppose there are 10 statements in a Java program and an exception occurs at statement 5; the rest of the code will not be executed, i.e., statements 6 to 10 will not be executed. However, when we perform exception handling, the rest of the statements will be executed. That is why we use exception handling in Java.</p>
+        <p>1. Type Theory in Exception Handling:<br/><br/>
+            Exceptions are types that represent exceptional conditions that may occur during program execution.
+            The try-catch construct allows for the handling of different types of exceptions.
+            2. Checked and Unchecked Exceptions:<br/><br/>
+            Checked exceptions must be either caught or declared in the method signature.
+            Unchecked exceptions (RuntimeExceptions) need not be explicitly caught or declared.
+            3. Throwing and Catching:<br/><br/>
+            The throw keyword is used to explicitly throw an exception.
+            The catch block is responsible for handling the exception, either by recovering from it or rethrowing it.</p>
+
+        <!--comment --> 
+        <a id="inst"></a>
+        <h1 style="color: rgb(62, 163, 107);;">Use of instanceOf operator</h1>
+        <p>The java instanceof operator is used to test whether the object is an instance of the specified type (class or subclass or interface).</p>
+    
+        <p>The instanceof in java is also known as type comparison operator because it compares the instance with type. It returns either true or false. 
+            If we apply the instanceof operator with any variable that has null value, it returns false.</p>
+
+        <p>1. Type Testing:<br/><br/>
+            The instanceof operator checks if an object is an instance of a particular class or implements a specific interface.
+            It returns a boolean value, indicating whether the object is of the specified type.
+            2. Use Cases:<br/><br/>
+            Commonly used in conditional statements to determine the type of an object before performing type-specific operations.
+            Enhances code safety by avoiding inappropriate type casting.</p>
+
+
+            <a href="#Menu"> Move to the Menu</a>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function checkPalindrome(num)
+        {
+            console.log(num)
+            str="";
+            temp=num;
+            while(num>0)
+            {
+                str+=num%10;
+                num=parseInt(num/=10);
+            }
+            if(temp==str)
+                document.getElementById("ans").innerHTML="Palindrome!!!";
+            else
+                document.getElementById("ans").innerHTML="Not Palindrome!!!";
+
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <table border="1" style="border-collapse: collapse;">
+            <tr>
+                <td><label for="n1">Enter Number: </label></td>
+                <td><input type="number" name="num" id="n1"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Calculate" onclick="checkPalindrome(num.value)"></td>
+                <td id="ans"> </td>
+            </tr>
+        </table>
+
+    </form>
+</body>
+</html>

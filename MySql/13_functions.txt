@@ -1,0 +1,146 @@
+1.
+//set global log_bin_trust_function_creators=1;// one time provision or write deterministic every time
+-----------------------------------------------------------------------------------
+delimiter #
+create function tot_sal(msal decimal(7,2), mcomm int) returns decimal(7,2)
+deterministic
+begin
+	declare temp decimal(7,2);
+	set temp = msal + ifnull(mcomm, 0);
+	return temp;
+end#
+delimiter ;
+
+;;;;;;;;;;;;;;;;;;;;;	
+ select empno, ename, sal , comm, tot_sal(sal, comm) "Total Sal"
+ from emp;
++-------+--------+---------+---------+-----------+
+| empno | ename  | sal     | comm    | Total Sal |
++-------+--------+---------+---------+-----------+
+|  7369 | SMITH  |  800.00 |    NULL |    800.00 |
+|  7499 | ALLEN  | 1600.00 |  300.00 |   1900.00 |
+|  7521 | WARD   | 1250.00 |  500.00 |   1750.00 |
+|  7566 | JONES  | 2975.00 |    NULL |   2975.00 |
+|  7654 | MARTIN | 1250.00 | 1400.00 |   2650.00 |
+|  7698 | BLAKE  | 2850.00 |    NULL |   2850.00 |
+|  7782 | CLARK  | 2450.00 |    NULL |   2450.00 |
+|  7788 | SCOTT  | 3000.00 |    NULL |   3000.00 |
+|  7839 | KING   | 5000.00 |    NULL |   5000.00 |
+|  7844 | TURNER | 1500.00 |    0.00 |   1500.00 |
+|  7876 | ADAMS  | 1100.00 |    NULL |   1100.00 |
+|  7900 | JAMES  |  950.00 |    NULL |    950.00 |
+|  7902 | FORD   | 3000.00 |    NULL |   3000.00 |
+|  7934 | MILLER | 1300.00 |    NULL |   1300.00 |
++-------+--------+---------+---------+-----------+
+
+2.
+delimiter #
+create function generate_email(mename varchar(20), mjob varchar(20), mempno int)
+returns varchar(40)
+deterministic
+begin
+	declare email varchar(40);
+	set email= concat(lower(mename),lower(mjob),mempno,"@knowit.com");
+	return email;
+end#
+delimiter ;
+
+;;;;;;;
+select ename, empno, job, generate_email(ename, job, empno) as " Email id"
+from emp1;
++--------+-------+-----------+-------------------------------+
+| ename  | empno | job       | Email id                      |
++--------+-------+-----------+-------------------------------+
+| SMITH  |  7369 | CLERK     | smithclerk7369@knowit.com     |
+| ALLEN  |  7499 | SALESMAN  | allensalesman7499@knowit.com  |
+| WARD   |  7521 | SALESMAN  | wardsalesman7521@knowit.com   |
+| JONES  |  7566 | MANAGER   | jonesmanager7566@knowit.com   |
+| MARTIN |  7654 | SALESMAN  | martinsalesman7654@knowit.com |
+| BLAKE  |  7698 | MANAGER   | blakemanager7698@knowit.com   |
+| CLARK  |  7782 | MANAGER   | clarkmanager7782@knowit.com   |
+| SCOTT  |  7788 | ANALYST   | scottanalyst7788@knowit.com   |
+| KING   |  7839 | PRESIDENT | kingpresident7839@knowit.com  |
+| TURNER |  7844 | SALESMAN  | turnersalesman7844@knowit.com |
+| ADAMS  |  7876 | CLERK     | adamsclerk7876@knowit.com     |
+| JAMES  |  7900 | CLERK     | jamesclerk7900@knowit.com     |
+| FORD   |  7902 | ANALYST   | fordanalyst7902@knowit.com    |
+| MILLER |  7934 | CLERK     | millerclerk7934@knowit.com    |
++--------+-------+-----------+-------------------------------+
+
+
+3.
+delimiter #
+create function incr_sal(msal decimal(7,2), mjob varchar(15))
+returns decimal(7,2)
+deterministic
+begin
+	declare usal decimal(7,2);
+	
+	if mjob='MANAGER' then
+		set usal = msal+(msal*0.05);
+	elseif mjob='CLERK' then
+		set usal = msal+(msal*0.07);
+	elseif mjob='ANALYST' then
+		set usal = msal+(msal*0.1);
+	end if;
+	return usal;
+end #
+delimiter ;	
+
+;;;;;;;;;;;;;;;;;;;;;
+select empno, ename, sal, incr_sal(sal, job) "Incremented Sal"
+from emp;
++-------+--------+---------+-----------------+
+| empno | ename  | sal     | Incremented Sal |
++-------+--------+---------+-----------------+
+|  7369 | SMITH  |  800.00 |          856.00 |
+|  7499 | ALLEN  | 1600.00 |            NULL |
+|  7521 | WARD   | 1250.00 |            NULL |
+|  7566 | JONES  | 2975.00 |         3123.75 |
+|  7654 | MARTIN | 1250.00 |            NULL |
+|  7698 | BLAKE  | 2850.00 |         2992.50 |
+|  7782 | CLARK  | 2450.00 |         2572.50 |
+|  7788 | SCOTT  | 3000.00 |         3300.00 |
+|  7839 | KING   | 5000.00 |            NULL |
+|  7844 | TURNER | 1500.00 |            NULL |
+|  7876 | ADAMS  | 1100.00 |         1177.00 |
+|  7900 | JAMES  |  950.00 |         1016.50 |
+|  7902 | FORD   | 3000.00 |         3300.00 |
+|  7934 | MILLER | 1300.00 |         1391.00 |
++-------+--------+---------+-----------------+
+
+4.
+delimiter #
+create function str(mename varchar(10), mjob varchar(15)) 
+returns varchar(40)
+deterministic
+begin
+	declare x varchar(40);
+	set x = concat(Upper(substr(mename,1,1)),Lower(substr(mename,2)),' is a', 	Upper(substr(mjob,1,1)),Lower(substr(mjob,2)) );
+	return x;
+end #
+delimiter ; 
+
+;;;;;;;;;;;;;;
+select str(ename,job) ":-)"
+from emp;
+
++---------------------+
+| :-)                 |
++---------------------+
+| Smith is aClerk     |
+| Allen is aSalesman  |
+| Ward is aSalesman   |
+| Jones is aManager   |
+| Martin is aSalesman |
+| Blake is aManager   |
+| Clark is aManager   |
+| Scott is aAnalyst   |
+| King is aPresident  |
+| Turner is aSalesman |
+| Adams is aClerk     |
+| James is aClerk     |
+| Ford is aAnalyst    |
+| Miller is aClerk    |
++---------------------+
+

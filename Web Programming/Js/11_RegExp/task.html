@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function show()
+        {
+            var val = document.getElementById("but1").value;
+            if(val=="Show Password")
+            {
+                document.getElementById("pass").type="text";
+                document.getElementById("but1").value="Hide";
+            }
+            else if(val=="Hide")
+            {
+                document.getElementById("pass").type="password";
+                document.getElementById("but1").value="Show Password";
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    Enter password: 
+    <input type="password" id="pass"/>
+    <input type="button" id="but1" value="Show Password" onclick="show()">
+    
+</body>
+</html>

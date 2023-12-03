@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Factorial</title>
+    <script>
+        function power(number1, number2)
+        {
+            var res=number1;
+            for(var i=1;i<number2; i++)    
+            {
+                res*=number1;
+            }
+            document.getElementById("ans").innerHTML= number1+" to power "+number2+" is "+res;
+            
+        }
+    </script>
+</head>
+<body>
+        <form method="get">
+            <table border="2" align="center" style="background-color: rgb(212, 78, 29);">
+                <tr>
+                    <td><label for="num1">Enter Base Number: </label></td>
+                    <td><input type="number" name="number1" id="num1"></td>
+                </tr>
+                <tr>
+                    <td><label for="num2">Enter Exponent Number: </label></td>
+                    <td><input type="number" name="number2" id="num2"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="Factorial" onclick="power(number1.value,number2.value)"></td>
+                    <td></td>
+                </tr>
+            </table>
+        </form>
+
+        <div id="ans" style="text-align: center;"></div>
+  
+    
+</body>
+</html>

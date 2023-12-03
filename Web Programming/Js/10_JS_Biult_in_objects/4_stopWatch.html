@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        hours=0
+        mins=0
+        secs=0
+        var time
+        function startSW()
+        {
+            secs++;
+            if(secs==60)
+            {
+                mins++;
+                if(mins==60)
+                {
+                    hours++
+                    if(hours==24)
+                    hours=mins=secs=0; 
+                    mins=0;
+                }
+                secs=0;
+            }
+
+            
+            if((hours)<10)
+                hours="0"+parseInt(hours);
+            if(mins<10)
+                mins="0"+parseInt(mins);
+            if(secs<10)
+                secs="0"+secs;
+
+            time=hours+':'+mins+':'+secs;
+            document.getElementById("stopwatch").innerHTML=time
+            f=setTimeout(startSW,1000)          
+        }
+        function pauseSW()
+        {
+            clearTimeout(f);
+
+        }
+        function stopSW()
+        {
+            clearTimeout(f);
+            hours=mins=secs="0"+0;
+            time=hours+':'+mins+':'+secs;
+            document.getElementById("stopwatch").innerHTML=time;
+
+        }
+    </script>
+</head>
+<body>
+    <hr/>
+    <div id="stopwatch" style="text-align: center; font-size: x-large;">00:00:00
+
+    </div>
+    <hr/>
+    <div style="text-align: center;">
+        <button onclick="startSW()">Start</button>
+        <button onclick="pauseSW()">Pause</button>
+        <button onclick="stopSW()">Stop</button>
+    </div>
+</body>
+</html>

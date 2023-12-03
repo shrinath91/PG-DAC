@@ -1,0 +1,81 @@
+create table emptmp
+    (
+eno int,
+ename varchar(10),
+sal decimal(7,2),
+comm int,
+totsal decimal(7,2)
+);
+
+
+
+1.
+delimiter #
+create trigger binsert
+before insert on emptmp
+for each row
+begin
+	set new.totsal = new.sal + new.comm;
+	
+end #
+delimiter ;	
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+mysql> insert into emptmp(eno, ename, sal, comm ) 
+	values (1,'asd', 2000,200);
+
++------+-------+---------+------+---------+
+| eno  | ename | sal     | comm | totsal  |
++------+-------+---------+------+---------+
+|    1 | asd   | 2000.00 |  200 | 2200.00 |
++------+-------+---------+------+---------+
+
+
+
+2.
+
+create table product
+(
+pid int,
+cname varchar(10),
+pname varchar(10),
+qty int
+);
+
++------+-----------+---------+------+
+| pid  | cname     | pname   | qty  |
++------+-----------+---------+------+
+|    1 | Meds      | Dettol  |   17 |
+|    2 | Essential | oil     |   19 |
+|    3 | meds      | Ban-aid |   16 |
+|    4 | Food      | Chips   |   18 |
++------+-----------+---------+------+
+
+create table orders
+(
+oid int not null auto_increment primary key,
+pid int,
+qty int,
+order_date date 
+);
+
+
+delimiter #
+create trigger aupdate
+after update on product
+for each row
+begin
+	if new.qty<15 then
+		insert into orders(pid,qty,order_date)
+		values(new.pid,20,curdate());
+	end if;
+end #
+delimiter ;
+
+;;;;;
+update product
+set qty=qty-1
+where pid=1;
+
+
+	

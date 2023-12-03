@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RegExp</title>
+    <script>
+        str = "welcome";
+        var pattern = /^[A-Z]{1}[a-z]{1,}/;
+        // alert(pattern.test(str));
+
+        str="Daulat Rattan"
+        pattern = /^[A-Z]{1}[a-z]{1,} [A-Z]{1}[a-z]{1,}/;
+        // alert(str+": " + pattern.test(str));
+        
+        str="+91 9860496091";
+        pattern=/^\+\d{2} \d{10}$/;
+        // alert(str+": " + pattern.test(str));
+        
+        str="shrinath@gmail.com";
+        pattern=/^[\w.#-]{3,20}@[\w]{3,10}\.[a-z]{2,3}$/;
+        // alert(str+": " + pattern.test(str));
+        
+        str="PG-dac";
+        pattern=/^\P\G\-[a-z]{3,8}/;
+        alert(str+": " + pattern.test(str));  
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

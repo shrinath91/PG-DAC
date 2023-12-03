@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2_form</title>
+    <script>
+        function validate()
+        {
+            ///email 
+            var email = document.getElementById("emid").value;
+            var emailPattern = /^[\w-#]{3,20}@[a-z]{3,10}\.[a-z]{2,3}$/;
+            if(!emailPattern.test(email))
+            {
+                alert("Not Valid Email!!!");
+                document.getElementById("emid").value="";
+                document.getElementById("emid").focus();
+                return;
+            }
+            ////checkbox
+            var check1 = document.getElementById("chk1").checked
+            var check2 = document.getElementById("chk2").checked
+            if(check1==false && check2==false)
+            {    
+                alert("No check boc selected");
+                return;
+            }
+
+            var occupation = document.getElementById("occc").value;
+            if(occupation=="")
+            {
+                alert("Select Occupation!!!");
+                return;
+            }
+
+            var junk1 = document.getElementById("jnk1").checked;
+            var junk2 = document.getElementById("jnk2").checked;
+            if((junk1==false && junk2==false))
+            {
+                alert("Select Junk email preference!!!");
+                return; 
+            }
+
+
+            document.getElementById("ff1").submit();
+        }
+    </script>
+</head>
+<body>
+    <form method="get" name="f1" id="ff1">
+        <table border="1" name="t1">
+            <tr>
+                <td align="left" colspan="2">Visitor Information</td>
+            </tr>
+            <tr name="t">
+                <td><label for="emid">Email Address: </label></td>
+                <td><input type="text" name="Emailadd" id="emid"></td>
+            </tr>
+            <tr>
+                <td><label>Do you use web for:</label></td>
+                <td>
+                    <input type="checkbox" name="use1" id="chk1" value="research">Reasearch
+                    <input type="checkbox" name="use2" id="chk2" value="purchase">Purchase
+                </td>
+            </tr>
+            <tr>
+                <td><label>Occupation</label></td>
+                <td>
+                    <select name="Occupation" id="occc">
+                        <option value="">(select one)</option>
+                        <option value="oc1">Teacher</option>
+                        <option value="oc2">Software Engineer</option>
+                        <option value="oc3">Govt Employee</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Want to send junk email?
+                </td>
+                    <td>
+                        <input type="radio" name="junk_email" id="jnk1" value="yes"/>Absolutly
+                        <input type="radio" name="junk_email" id="jnk2" value="no"/>No Way, man
+                </td>
+            </tr>
+
+            </tr>
+                <td align="right"><input type="button" value="submit" onclick="validate()"></td>
+                <td><input type="reset" value="Reset"></td>
+            </tr>
+            
+        </table>
+    </form>
+    
+</body>
+</html>

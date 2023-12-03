@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>3_show shadow</title>
+    <script>
+        function showShadow()
+        {
+            let a1 = document.getElementsByTagName("h1");
+            a1[0].style.textShadow = "2px 3px 4px black";
+        }
+        function removeShadow()
+        {
+            a2 = document.getElementById("h");
+            a2.style.textShadow="none";
+        }
+
+    </script>
+</head>
+<body>
+
+    <!-- <h1 id="div1" onmouseover="showShadow()" onmouseout="removeShadow()">Hello, from body</h1> -->
+    <h1 onmouseover="showShadow()" onmouseout="removeShadow()" id="h">hello</h1>
+    
+</body>
+</html>
