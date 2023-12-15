@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Reg. page</title>
+    <script src="../../jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#usrid").blur(function(){
+                var uname = $("#usrid").val();
+                var url = "http://localhost:9000/checkuser?usrname="+uname;
+
+
+                $.get(url, function(data,status){
+                    if(status=="success")
+                    {
+                        $("#msg").html(data);
+                    }
+                });
+            });
+        });
+    </script>
+</head> 
+<body>
+    <h1>Registration</h1>
+    <table border=1 style="border-collapse: collapse;">
+        <tr>
+            <td>Enter User Name:</td><td> <input id="usrid" type="text"/></td>
+        </tr>
+        <tr><td id="msg" colspan="2" style="color: red;"></td></tr>
+        <tr>
+            <td>Password: </td><td><input type="password"/></td>
+        </tr>
+    </table>
+</body>
+</html>

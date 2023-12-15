@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../jquery-ui.min.js"></script>
+    <script>
+    //   $(document).ready(function () {
+    //     $("a").click(function () {
+    //       $(this).next().slideToggle(3000);
+    //     });
+    //   });
+    $(document).ready(function(){
+        $("a.open").click(function(){
+            $(this).next().slideDown(1000);
+           
+        })
+
+        $("a.close").click(function(){
+            $(this).parent().slideUp(5000);
+        })
+        
+    })
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li>
+        Samsung mobiles <a class="open" href="#">View Specification</a>
+        <div id="detail1" style="display: none">
+          <p>RAM:8GB 2</p>
+          <p>Processor:------</p>
+          <p>Back camera:------</p>
+          <p>Front camera:------</p>
+          <p>Audio:------</p>
+          <a href="#" class="close">show less</a>
+        </div>
+      </li>
+      <li>
+        Apple mobiles <a href="#" id="li2" class="open">View Specification</a>
+        <div id="detail1" style="display: none">
+          <p>RAM:8GB 2</p>
+          <p>Processor:------</p>
+          <p>Back camera:------</p>
+          <p>Front camera:------</p>
+          <p>Audio:------</p>
+          <a href="#" class="close">show less</a>
+        </div>
+      </li>
+      <li>
+        Realme mobiles <a href="#" id="li3" class="open">View Specification</a>
+        <div id="detail1" style="display: none">
+          <p>RAM:8GB 2</p>
+          <p>Processor:------</p>
+          <p>Back camera:------</p>
+          <p>Front camera:------</p>
+          <p>Audio:------</p>
+          <a href="#" class="close">show less</a>
+        </div>
+      </li>
+      <li>
+        Xiaomi mobiles <a href="#" id="li4" class="open">View Specification</a>
+        <div id="detail1" style="display: none">
+          <p>RAM:8GB 2</p>
+          <p>Processor:------</p>
+          <p>Back camera:------</p>
+          <p>Front camera:------</p>
+          <p>Audio:------</p>
+          <a href="#" class="close">show less</a>
+        </div>
+      </li>
+      <li>
+        Apple mobiles <a href="#" id="li5" class="open">View Specification</a>
+        <div id="detail1" style="display: none">
+          <p>RAM:8GB 2</p>
+          <p>Processor:------</p>
+          <p>Back camera:------</p>
+          <p>Front camera:------</p>
+          <p>Audio:------</p>
+          <a href="#" class="close">show less</a>
+        </div>
+      </li>
+      <li>
+        1+ mobiles <a href="#" id="li6" class="open">View Specification</a>
+        <div id="detail1" style="display: none">
+          <p>RAM:8GB 2</p>
+          <p>Processor:------</p>
+          <p>Back camera:------</p>
+          <p>Front camera:------</p>
+          <p>Audio:------</p>
+          <a href="#" class="close">show less</a>
+        </div>
+        
+      </li>
+    </ul>
+  </body>
+</html>

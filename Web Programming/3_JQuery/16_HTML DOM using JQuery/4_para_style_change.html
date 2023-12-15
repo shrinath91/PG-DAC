@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("p").mouseover(function(){
+                $(this).css({"background-color":"red","color":"blue"})
+            });
+            $("p").mouseout(function(){
+                $(this).css("background-color","")
+            });
+            
+        });
+
+    </script>
+</head>
+<body>
+    <p style="color: red;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit amet totam vitae quae vero deleniti necessitatibus laudantium accusantium, illum cumque ducimus excepturi quia repudiandae enim et qui quibusdam ullam facilis.</p>
+    <h1>This is Paragraph</h1>
+    <p>This is second Paragraph</p>
+    <a href="#">Hyper link</a>
+    <br/>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quia nobis dolore corrupti quod nesciunt sequi autem neque, vitae velit ducimus nisi atque temporibus adipisci laborum esse sunt saepe non!</p>
+</body>
+</html>

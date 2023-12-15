@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#hide1").click(()=>{
+                $("img").hide("slow");
+            })
+            
+            $("#show1").click(function(){
+                $("img").show();
+            })
+
+            $("#toggle1").click(function(){
+                $("img").toggle();
+            })
+            
+        }); 
+        
+    </script>
+</head>
+<body>
+    <div style="height: 400px; width: 600px; border: 1px solid red;">
+        <img src="3919977.jpg" alt="Plane" height="400" width="600">
+    </div>
+    </br>
+    <button id="hide1">hide</button>
+    <button id="show1">show</button>
+    <button id="toggle1">toggle</button>
+</body>
+</html>

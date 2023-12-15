@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <title>Hello</title>
+    <script>
+        function printHello()//step 1 
+        {
+            ajax = createAjaxObject();//2
+            if(ajax)
+                alert("ajax is created");
+
+            var url = "http://localhost:9000/greetMessage?name="+document.getElementById("name").value;
+            
+            ajax.onreadystatechange = updatePage;//function(){};// Instead of writing separate method outside we can write in here also
+            ajax.open("GET",url,true);//3
+            ajax.send("");//4
+
+
+        }
+        function updatePage()
+        {
+            alert(ajax.readyState);
+            if(ajax.readyState==4)
+            {
+                {
+                    document.getElementById("greetmsg").innerHTML= ajax.responseText;
+                }
+            }
+        }
+
+        function createAjaxObject()
+        {
+            try
+            {
+                var ajax = new XMLHttpRequest();
+                return ajax;
+            }
+            catch(e)
+            {
+                try
+                {
+                    var ajax = new ActiveXObject("Microsoft.XMLHTTP");
+                    return ajax;
+                }
+                catch(e)
+                {
+                    alert("Ajax is not supported");
+                }
+            }
+        }
+    </script>
+</head>
+    <input id="name" type="text"/>
+    <button onclick="printHello()">Press to Welcome message</button>
+    <div id="greetmsg"></div>
+<body>
+    
+</body>
+</html>

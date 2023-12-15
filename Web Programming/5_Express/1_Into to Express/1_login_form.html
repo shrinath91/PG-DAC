@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>get method</h1>
+    <form action="http://localhost:9000/checklogin" method="get">
+        <label for="uidtext1">Enter uid:</label>
+        <input type="text" name="uid" id="uidtext1">
+        <br/>
+        <label for="pwdtext1">Enter Password:</label>
+        <input type="password" name="pass" id="pwdtext1"> 
+        <br/>
+        <input type="submit" value="Login">
+        <input type="reset" value="Clear">
+    </form>
+    
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <h1>post method</h1>
+    <form method="post">
+        <label for="uidtext2">Enter uid:</label>
+        <input type="text" name="uid" id="uidtext2">
+        <br/>
+        <label for="pwdtext2">Enter Password:</label>
+        <input type="password" name="pass" id="pwdtext2"> 
+        <br/>
+        <input type="submit" value="Login">
+        <input type="reset" value="Clear">
+    </form>
+
+    
+</body>
+</html>

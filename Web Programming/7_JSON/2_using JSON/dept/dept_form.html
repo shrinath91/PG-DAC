@@ -1,0 +1,50 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dept</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#div1").on("click","a",function(){
+                    $(this).next().next().slideToggle("slow");
+                })
+
+                $("#but1").click(function(){
+                    var dno = $("#inp1").val();
+                    var url = "http://localhost:9000/getemps";
+                    
+                    $.post(url,{deptno:dno},function(data,status){
+                        if(status=="success")
+                        {
+                            var emps = JSON.parse(data);
+                            var str = "";
+                            // alert("")
+                            for(i=0; i<emps.length; i++)
+                            {
+                                str+="<a href='#'>"+emps[i].EMPNO+"</a><br/>";
+                                str+="<div style='display:none'>"
+                                str+="<p> Name: "+emps[i].ENAME+"</p>";
+                                str+="<p>Salary: "+emps[i].SAL+"</p>";
+                                str+="<p>Hire Date: "+emps[i].HIREDATE+"</p>";
+                                str+="</div>";
+                            }
+                            $("#div1").html(str);
+                        }
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <form method="post">
+            Enter Dept No: <input type="number" id="inp1"/>
+            <br/>
+            <br/>
+            <input type="button" value="Get Employees" id="but1">
+        </form>
+        <div id="div1"></div>
+        
+    </body>
+    </html>

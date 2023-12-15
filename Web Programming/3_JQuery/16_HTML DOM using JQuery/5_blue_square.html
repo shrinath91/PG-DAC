@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("div").click(function(){
+                $(this).find("p").show();
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div 
+        style="border: 2px solid black;
+                height: 150px; 
+                width: 150px;
+                background-color: blue;">
+        <p style="display: none;">This is Blue Color</p>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("img").mousedown(function(){
+                $(this).fadeOut("fast");
+            })
+            $("img").mouseup(function(){
+                $(this).fadeIn(3000);
+            })
+
+        });
+
+    </script>
+</head>
+<body>
+    <table border="1" style="border-collapse: collapse;">
+        <tr> 
+            <td><img src="3919977.jpg" alt="img" style=" height: 100px; width: 100px;"></td>
+            <td><img src="3919977.jpg" alt="img" style=" height: 100px; width: 100px;"></td>
+            <td><img src="3919977.jpg" alt="img" style=" height: 100px; width: 100px;"></td>
+        </tr>
+        <tr> 
+            <td><img src="3919977.jpg" alt="img" style=" height: 100px; width: 100px;"></td>
+            <td><img src="3919977.jpg" alt="img" style=" height: 100px; width: 100px;"></td>
+            <td><img src="3919977.jpg" alt="img" style=" height: 100px; width: 100px;"></td>
+        </tr>
+        <tr> 
+            <td><img src="3919977.jpg" alt="img" style=" height: 100px; width: 100px;"></td>
+            <td><img src="3919977.jpg" alt="img" style=" height: 100px; width: 100px;"></td>
+            <td><img src="3919977.jpg" alt="img" style=" height: 100px; width: 100px;"></td>
+        </tr>
+    </table>
+</body>
+</html>

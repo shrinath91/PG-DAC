@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("img.media").click(function(){
+                $("#mainimg").attr("src",(this).src);
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div style="text-align: center;">
+        <img src="3919977.jpg" 
+        id="mainimg"
+        alt="plane"
+        height="350"
+        width="400"
+        /> 
+    </div>
+    <hr/>
+    <div">
+        <table style="margin: auto;">
+            <tr>
+                <td><img src="2248344.jpg" alt="" height="80" width="100" class="media"></td>
+                <td><img src="3919885.jpg" alt="" height="80" width="100" class="media"></td>
+                <td><img src="3919966.jpg" alt="" height="80" width="100" class="media"></td>
+                <td><img src="3919977.jpg" alt="" height="80" width="100" class="media"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

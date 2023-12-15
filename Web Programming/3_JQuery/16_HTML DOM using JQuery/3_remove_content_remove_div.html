@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4_</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#but1").click(function(){
+                $("#div1").children().remove();
+            });
+            $("#but2").click(function(){
+                $("#div1").remove();
+                
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit amet totam vitae quae vero deleniti necessitatibus laudantium accusantium, illum cumque ducimus excepturi quia repudiandae enim et qui quibusdam ullam facilis.</p>
+    <h1>This is Paragraph</h1>
+    <div id="div1" style="border: 1px solid red;">
+        <p>This is second Paragraph</p>
+        <ul type="square">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Java Script</li>
+            <li>JQuery</li>
+        </ul>
+        <a href="#">Hyper link</a>
+    </div>
+    <button id="but1">Remove bordered content</button>
+    <button id="but2">Remove border</button>
+</body>
+</html>
