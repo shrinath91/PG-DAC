@@ -107,8 +107,8 @@ function App() {
               <li className="nav-item">
                   <Link to="/formval" className="nav-link">Form Validation</Link>
               </li>
-
           </ul>  
+          
             <Routes>
               <Route path="/" element={ <HomeComp/> } />
               <Route path="/hello" element={<HelloClass/> }  />

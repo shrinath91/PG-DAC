@@ -43,8 +43,7 @@ app.post("/insertemp",function(req,res){
     var ename = req.body.ename;
     var job = req.body.job;
     var dno = req.body.dno;
-    console.log(req.body);
-    console.log("Hello");
+    // console.log(req.body);
 
     var query = "insert into emp(EMPNO,ENAME,JOB, DEPTNO) values(?,?,?,?)"
     conn.query(query, [empno,ename,job,dno], function(err){

@@ -37,7 +37,8 @@ export default function InserEmp()
 
 
         fetch("http://localhost:9000/insertemp", reqOptions)
-        .then(resp => resp.text())
+        // .then(resp => console.log(resp.text()) )
+        .then(resp => {return resp.text()})
         .then(data => setMSG(data))
     }
 
