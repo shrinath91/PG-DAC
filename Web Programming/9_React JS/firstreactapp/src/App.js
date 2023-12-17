@@ -27,6 +27,8 @@ import DynamicStyle from './components/7_React Routing/DynamicStyle';
 import GetRESTAPI from './components/9_Dealing with REST API/1_Assignment';
 import InserEmp from './components/9_Dealing with REST API/3_Assignment';
 import FormValidation from './components/5_Handling forms and events\'/FormValidation';
+import EditEmp from './components/9_Dealing with REST API/EditEmp';
+import { ErrorBoundary } from 'react-error-boundary';
 
 function App() {
   return (
@@ -107,6 +109,9 @@ function App() {
               <li className="nav-item">
                   <Link to="/formval" className="nav-link">Form Validation</Link>
               </li>
+              <li className="nav-item">
+                  <Link to="/editemp" className="nav-link">Edit Emp</Link>
+              </li>
           </ul>  
           
             <Routes>
@@ -119,6 +124,15 @@ function App() {
               <Route path='*' element={ <WrongUrl/> } />
               <Route path='/insertemp' element={ <InserEmp/>  } />
               <Route path='/formval' element={ <FormValidation/>  } />
+              <Route path='/editemp' element={ 
+              <ErrorBoundary fallbackRender={()=>{
+                return(
+                  <h1>Something went wrong!!!</h1>
+                )
+              }}>
+                <EditEmp/>  
+              </ErrorBoundary>
+              } />
             </Routes>
           
 
