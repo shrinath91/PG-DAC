@@ -1,0 +1,15 @@
+E:\GitHub\PG-DAC git\.net\6_Other_OOP_Concept\bin\Debug\net8.0\6_Other_OOP_Concept.exe
+E:\GitHub\PG-DAC git\.net\6_Other_OOP_Concept\bin\Debug\net8.0\6_Other_OOP_Concept.deps.json
+E:\GitHub\PG-DAC git\.net\6_Other_OOP_Concept\bin\Debug\net8.0\6_Other_OOP_Concept.runtimeconfig.json
+E:\GitHub\PG-DAC git\.net\6_Other_OOP_Concept\bin\Debug\net8.0\6_Other_OOP_Concept.dll
+E:\GitHub\PG-DAC git\.net\6_Other_OOP_Concept\bin\Debug\net8.0\6_Other_OOP_Concept.pdb
+E:\GitHub\PG-DAC git\.net\6_Other_OOP_Concept\obj\Debug\net8.0\6_Other_OOP_Concept.GeneratedMSBuildEditorConfig.editorconfig
+E:\GitHub\PG-DAC git\.net\6_Other_OOP_Concept\obj\Debug\net8.0\6_Other_OOP_Concept.AssemblyInfoInputs.cache
+E:\GitHub\PG-DAC git\.net\6_Other_OOP_Concept\obj\Debug\net8.0\6_Other_OOP_Concept.AssemblyInfo.cs
+E:\GitHub\PG-DAC git\.net\6_Other_OOP_Concept\obj\Debug\net8.0\6_Other_OOP_Concept.csproj.CoreCompileInputs.cache
+E:\GitHub\PG-DAC git\.net\6_Other_OOP_Concept\obj\Debug\net8.0\6_Other_OOP_Concept.sourcelink.json
+E:\GitHub\PG-DAC git\.net\6_Other_OOP_Concept\obj\Debug\net8.0\6_Other_OOP_Concept.dll
+E:\GitHub\PG-DAC git\.net\6_Other_OOP_Concept\obj\Debug\net8.0\refint\6_Other_OOP_Concept.dll
+E:\GitHub\PG-DAC git\.net\6_Other_OOP_Concept\obj\Debug\net8.0\6_Other_OOP_Concept.pdb
+E:\GitHub\PG-DAC git\.net\6_Other_OOP_Concept\obj\Debug\net8.0\6_Other_OOP_Concept.genruntimeconfig.cache
+E:\GitHub\PG-DAC git\.net\6_Other_OOP_Concept\obj\Debug\net8.0\ref\6_Other_OOP_Concept.dll

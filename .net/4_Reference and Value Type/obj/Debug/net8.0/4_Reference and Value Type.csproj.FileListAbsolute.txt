@@ -1,0 +1,15 @@
+E:\GitHub\PG-DAC git\.net\4_Reference and Value Type\obj\Debug\net8.0\4_Reference and Value Type.GeneratedMSBuildEditorConfig.editorconfig
+E:\GitHub\PG-DAC git\.net\4_Reference and Value Type\obj\Debug\net8.0\4_Reference and Value Type.AssemblyInfoInputs.cache
+E:\GitHub\PG-DAC git\.net\4_Reference and Value Type\obj\Debug\net8.0\4_Reference and Value Type.AssemblyInfo.cs
+E:\GitHub\PG-DAC git\.net\4_Reference and Value Type\obj\Debug\net8.0\4_Reference and Value Type.csproj.CoreCompileInputs.cache
+E:\GitHub\PG-DAC git\.net\4_Reference and Value Type\obj\Debug\net8.0\4_Reference and Value Type.sourcelink.json
+E:\GitHub\PG-DAC git\.net\4_Reference and Value Type\bin\Debug\net8.0\4_Reference and Value Type.exe
+E:\GitHub\PG-DAC git\.net\4_Reference and Value Type\bin\Debug\net8.0\4_Reference and Value Type.deps.json
+E:\GitHub\PG-DAC git\.net\4_Reference and Value Type\bin\Debug\net8.0\4_Reference and Value Type.runtimeconfig.json
+E:\GitHub\PG-DAC git\.net\4_Reference and Value Type\bin\Debug\net8.0\4_Reference and Value Type.dll
+E:\GitHub\PG-DAC git\.net\4_Reference and Value Type\bin\Debug\net8.0\4_Reference and Value Type.pdb
+E:\GitHub\PG-DAC git\.net\4_Reference and Value Type\obj\Debug\net8.0\4_Reference and Value Type.dll
+E:\GitHub\PG-DAC git\.net\4_Reference and Value Type\obj\Debug\net8.0\refint\4_Reference and Value Type.dll
+E:\GitHub\PG-DAC git\.net\4_Reference and Value Type\obj\Debug\net8.0\4_Reference and Value Type.pdb
+E:\GitHub\PG-DAC git\.net\4_Reference and Value Type\obj\Debug\net8.0\4_Reference and Value Type.genruntimeconfig.cache
+E:\GitHub\PG-DAC git\.net\4_Reference and Value Type\obj\Debug\net8.0\ref\4_Reference and Value Type.dll

@@ -1,0 +1,15 @@
+E:\GitHub\PG-DAC git\.net\8_Exception_Handling\bin\Debug\net8.0\8_Exception_Handling.exe
+E:\GitHub\PG-DAC git\.net\8_Exception_Handling\bin\Debug\net8.0\8_Exception_Handling.deps.json
+E:\GitHub\PG-DAC git\.net\8_Exception_Handling\bin\Debug\net8.0\8_Exception_Handling.runtimeconfig.json
+E:\GitHub\PG-DAC git\.net\8_Exception_Handling\bin\Debug\net8.0\8_Exception_Handling.dll
+E:\GitHub\PG-DAC git\.net\8_Exception_Handling\bin\Debug\net8.0\8_Exception_Handling.pdb
+E:\GitHub\PG-DAC git\.net\8_Exception_Handling\obj\Debug\net8.0\8_Exception_Handling.GeneratedMSBuildEditorConfig.editorconfig
+E:\GitHub\PG-DAC git\.net\8_Exception_Handling\obj\Debug\net8.0\8_Exception_Handling.AssemblyInfoInputs.cache
+E:\GitHub\PG-DAC git\.net\8_Exception_Handling\obj\Debug\net8.0\8_Exception_Handling.AssemblyInfo.cs
+E:\GitHub\PG-DAC git\.net\8_Exception_Handling\obj\Debug\net8.0\8_Exception_Handling.csproj.CoreCompileInputs.cache
+E:\GitHub\PG-DAC git\.net\8_Exception_Handling\obj\Debug\net8.0\8_Exception_Handling.sourcelink.json
+E:\GitHub\PG-DAC git\.net\8_Exception_Handling\obj\Debug\net8.0\8_Exception_Handling.dll
+E:\GitHub\PG-DAC git\.net\8_Exception_Handling\obj\Debug\net8.0\refint\8_Exception_Handling.dll
+E:\GitHub\PG-DAC git\.net\8_Exception_Handling\obj\Debug\net8.0\8_Exception_Handling.pdb
+E:\GitHub\PG-DAC git\.net\8_Exception_Handling\obj\Debug\net8.0\8_Exception_Handling.genruntimeconfig.cache
+E:\GitHub\PG-DAC git\.net\8_Exception_Handling\obj\Debug\net8.0\ref\8_Exception_Handling.dll

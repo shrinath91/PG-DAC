@@ -1,0 +1,15 @@
+E:\GitHub\PG-DAC git\.net\3_OOP-1\bin\Debug\net8.0\3_OOP-1.exe
+E:\GitHub\PG-DAC git\.net\3_OOP-1\bin\Debug\net8.0\3_OOP-1.deps.json
+E:\GitHub\PG-DAC git\.net\3_OOP-1\bin\Debug\net8.0\3_OOP-1.runtimeconfig.json
+E:\GitHub\PG-DAC git\.net\3_OOP-1\bin\Debug\net8.0\3_OOP-1.dll
+E:\GitHub\PG-DAC git\.net\3_OOP-1\bin\Debug\net8.0\3_OOP-1.pdb
+E:\GitHub\PG-DAC git\.net\3_OOP-1\obj\Debug\net8.0\3_OOP-1.GeneratedMSBuildEditorConfig.editorconfig
+E:\GitHub\PG-DAC git\.net\3_OOP-1\obj\Debug\net8.0\3_OOP-1.AssemblyInfoInputs.cache
+E:\GitHub\PG-DAC git\.net\3_OOP-1\obj\Debug\net8.0\3_OOP-1.AssemblyInfo.cs
+E:\GitHub\PG-DAC git\.net\3_OOP-1\obj\Debug\net8.0\3_OOP-1.csproj.CoreCompileInputs.cache
+E:\GitHub\PG-DAC git\.net\3_OOP-1\obj\Debug\net8.0\3_OOP-1.sourcelink.json
+E:\GitHub\PG-DAC git\.net\3_OOP-1\obj\Debug\net8.0\3_OOP-1.dll
+E:\GitHub\PG-DAC git\.net\3_OOP-1\obj\Debug\net8.0\refint\3_OOP-1.dll
+E:\GitHub\PG-DAC git\.net\3_OOP-1\obj\Debug\net8.0\3_OOP-1.pdb
+E:\GitHub\PG-DAC git\.net\3_OOP-1\obj\Debug\net8.0\3_OOP-1.genruntimeconfig.cache
+E:\GitHub\PG-DAC git\.net\3_OOP-1\obj\Debug\net8.0\ref\3_OOP-1.dll

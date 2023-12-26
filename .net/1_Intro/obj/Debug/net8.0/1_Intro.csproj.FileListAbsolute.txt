@@ -1,0 +1,15 @@
+E:\GitHub\PG-DAC git\.net\1_Intro\obj\Debug\net8.0\1_Intro.GeneratedMSBuildEditorConfig.editorconfig
+E:\GitHub\PG-DAC git\.net\1_Intro\obj\Debug\net8.0\1_Intro.AssemblyInfoInputs.cache
+E:\GitHub\PG-DAC git\.net\1_Intro\obj\Debug\net8.0\1_Intro.AssemblyInfo.cs
+E:\GitHub\PG-DAC git\.net\1_Intro\obj\Debug\net8.0\1_Intro.csproj.CoreCompileInputs.cache
+E:\GitHub\PG-DAC git\.net\1_Intro\obj\Debug\net8.0\1_Intro.sourcelink.json
+E:\GitHub\PG-DAC git\.net\1_Intro\bin\Debug\net8.0\1_Intro.exe
+E:\GitHub\PG-DAC git\.net\1_Intro\bin\Debug\net8.0\1_Intro.deps.json
+E:\GitHub\PG-DAC git\.net\1_Intro\bin\Debug\net8.0\1_Intro.runtimeconfig.json
+E:\GitHub\PG-DAC git\.net\1_Intro\bin\Debug\net8.0\1_Intro.dll
+E:\GitHub\PG-DAC git\.net\1_Intro\bin\Debug\net8.0\1_Intro.pdb
+E:\GitHub\PG-DAC git\.net\1_Intro\obj\Debug\net8.0\1_Intro.dll
+E:\GitHub\PG-DAC git\.net\1_Intro\obj\Debug\net8.0\refint\1_Intro.dll
+E:\GitHub\PG-DAC git\.net\1_Intro\obj\Debug\net8.0\1_Intro.pdb
+E:\GitHub\PG-DAC git\.net\1_Intro\obj\Debug\net8.0\1_Intro.genruntimeconfig.cache
+E:\GitHub\PG-DAC git\.net\1_Intro\obj\Debug\net8.0\ref\1_Intro.dll

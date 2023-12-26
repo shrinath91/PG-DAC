@@ -29,6 +29,8 @@ import InserEmp from './components/9_Dealing with REST API/3_Assignment';
 import FormValidation from './components/5_Handling forms and events\'/FormValidation';
 import EditEmp from './components/9_Dealing with REST API/EditEmp';
 import { ErrorBoundary } from 'react-error-boundary';
+import History from './components/proj/History';
+import Home from './components/proj/Home';
 
 function App() {
   return (
@@ -87,7 +89,7 @@ function App() {
           {/* <RegForm/> */}
 
         {/* Components Life Cycle */}
-          <ul className="nav navbar">
+          {/* <ul className="nav navbar"> umcomment
               <li className="nav-item">
                   <Link to="/hello" className="nav-link">Hello comp</Link>
               </li>
@@ -133,10 +135,8 @@ function App() {
                 <EditEmp/>  
               </ErrorBoundary>
               } />
-            </Routes>
-          
-
-          
+            </Routes> */}
+            
         </div>
   );
 }
