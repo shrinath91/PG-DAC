@@ -1,0 +1,30 @@
+﻿@model List<Emp>;
+<div><a asp-controller="Employee" asp-action="AddEmp">Add Employee</a></div>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+
+        <th>Id</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Address</th>
+        <th>Gender</th>
+        <th>Update</th>
+        <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Emp e in Model)
+        {
+            <tr>
+                <td>@e.Id</td>
+                <td>@e.Name</td>
+                <td>@e.Sal</td>
+                <td>@e.Address</td>
+                <td>@e.Gender</td>
+                <td><a asp-controller="Employee" asp-action="UpdateEmp" asp-route-id="@e.Id">Update</a></td>
+                <td><a asp-controller="Employee" asp-action="DeleteEmp" asp-route-id="@e.Id">Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

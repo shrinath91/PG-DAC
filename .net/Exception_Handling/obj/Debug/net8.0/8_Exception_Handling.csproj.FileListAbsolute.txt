@@ -1,5 +1,0 @@
-E:\GitHub\PG-DAC git\.net\Exception_Handling\obj\Debug\net8.0\8_Exception_Handling.GeneratedMSBuildEditorConfig.editorconfig
-E:\GitHub\PG-DAC git\.net\Exception_Handling\obj\Debug\net8.0\8_Exception_Handling.AssemblyInfoInputs.cache
-E:\GitHub\PG-DAC git\.net\Exception_Handling\obj\Debug\net8.0\8_Exception_Handling.AssemblyInfo.cs
-E:\GitHub\PG-DAC git\.net\Exception_Handling\obj\Debug\net8.0\8_Exception_Handling.csproj.CoreCompileInputs.cache
-E:\GitHub\PG-DAC git\.net\Exception_Handling\obj\Debug\net8.0\8_Exception_Handling.sourcelink.json

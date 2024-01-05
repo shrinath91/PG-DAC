@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+        
+    <wb-module deploy-name="_02SecondWeb">
+                
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+                
+        <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
+                
+        <property name="java-output-path" value="/_02SecondWeb/build/classes"/>
+        <property name="context-root" value="_02SecondWeb"/>
+            
+    </wb-module>
+    
+</project-modules>

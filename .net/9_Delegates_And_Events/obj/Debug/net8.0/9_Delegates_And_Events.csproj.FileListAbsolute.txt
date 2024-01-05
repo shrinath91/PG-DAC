@@ -1,0 +1,15 @@
+E:\GitHub\PG-DAC git\.net\9_Delegates_And_Events\obj\Debug\net8.0\9_Delegates_And_Events.GeneratedMSBuildEditorConfig.editorconfig
+E:\GitHub\PG-DAC git\.net\9_Delegates_And_Events\obj\Debug\net8.0\9_Delegates_And_Events.AssemblyInfoInputs.cache
+E:\GitHub\PG-DAC git\.net\9_Delegates_And_Events\obj\Debug\net8.0\9_Delegates_And_Events.AssemblyInfo.cs
+E:\GitHub\PG-DAC git\.net\9_Delegates_And_Events\obj\Debug\net8.0\9_Delegates_And_Events.csproj.CoreCompileInputs.cache
+E:\GitHub\PG-DAC git\.net\9_Delegates_And_Events\obj\Debug\net8.0\9_Delegates_And_Events.sourcelink.json
+E:\GitHub\PG-DAC git\.net\9_Delegates_And_Events\bin\Debug\net8.0\9_Delegates_And_Events.exe
+E:\GitHub\PG-DAC git\.net\9_Delegates_And_Events\bin\Debug\net8.0\9_Delegates_And_Events.deps.json
+E:\GitHub\PG-DAC git\.net\9_Delegates_And_Events\bin\Debug\net8.0\9_Delegates_And_Events.runtimeconfig.json
+E:\GitHub\PG-DAC git\.net\9_Delegates_And_Events\bin\Debug\net8.0\9_Delegates_And_Events.dll
+E:\GitHub\PG-DAC git\.net\9_Delegates_And_Events\bin\Debug\net8.0\9_Delegates_And_Events.pdb
+E:\GitHub\PG-DAC git\.net\9_Delegates_And_Events\obj\Debug\net8.0\9_Delegates_And_Events.dll
+E:\GitHub\PG-DAC git\.net\9_Delegates_And_Events\obj\Debug\net8.0\refint\9_Delegates_And_Events.dll
+E:\GitHub\PG-DAC git\.net\9_Delegates_And_Events\obj\Debug\net8.0\9_Delegates_And_Events.pdb
+E:\GitHub\PG-DAC git\.net\9_Delegates_And_Events\obj\Debug\net8.0\9_Delegates_And_Events.genruntimeconfig.cache
+E:\GitHub\PG-DAC git\.net\9_Delegates_And_Events\obj\Debug\net8.0\ref\9_Delegates_And_Events.dll

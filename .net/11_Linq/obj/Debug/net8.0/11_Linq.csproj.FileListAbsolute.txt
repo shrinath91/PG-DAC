@@ -1,0 +1,15 @@
+E:\GitHub\PG-DAC git\.net\11_Linq\bin\Debug\net8.0\11_Linq.exe
+E:\GitHub\PG-DAC git\.net\11_Linq\bin\Debug\net8.0\11_Linq.deps.json
+E:\GitHub\PG-DAC git\.net\11_Linq\bin\Debug\net8.0\11_Linq.runtimeconfig.json
+E:\GitHub\PG-DAC git\.net\11_Linq\bin\Debug\net8.0\11_Linq.dll
+E:\GitHub\PG-DAC git\.net\11_Linq\bin\Debug\net8.0\11_Linq.pdb
+E:\GitHub\PG-DAC git\.net\11_Linq\obj\Debug\net8.0\11_Linq.GeneratedMSBuildEditorConfig.editorconfig
+E:\GitHub\PG-DAC git\.net\11_Linq\obj\Debug\net8.0\11_Linq.AssemblyInfoInputs.cache
+E:\GitHub\PG-DAC git\.net\11_Linq\obj\Debug\net8.0\11_Linq.AssemblyInfo.cs
+E:\GitHub\PG-DAC git\.net\11_Linq\obj\Debug\net8.0\11_Linq.csproj.CoreCompileInputs.cache
+E:\GitHub\PG-DAC git\.net\11_Linq\obj\Debug\net8.0\11_Linq.sourcelink.json
+E:\GitHub\PG-DAC git\.net\11_Linq\obj\Debug\net8.0\11_Linq.dll
+E:\GitHub\PG-DAC git\.net\11_Linq\obj\Debug\net8.0\refint\11_Linq.dll
+E:\GitHub\PG-DAC git\.net\11_Linq\obj\Debug\net8.0\11_Linq.pdb
+E:\GitHub\PG-DAC git\.net\11_Linq\obj\Debug\net8.0\11_Linq.genruntimeconfig.cache
+E:\GitHub\PG-DAC git\.net\11_Linq\obj\Debug\net8.0\ref\11_Linq.dll

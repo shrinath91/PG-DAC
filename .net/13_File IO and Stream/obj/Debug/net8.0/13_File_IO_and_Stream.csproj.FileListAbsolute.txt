@@ -1,0 +1,15 @@
+E:\GitHub\PG-DAC git\.net\13_File IO and Stream\obj\Debug\net8.0\13_File_IO_and_Stream.GeneratedMSBuildEditorConfig.editorconfig
+E:\GitHub\PG-DAC git\.net\13_File IO and Stream\obj\Debug\net8.0\13_File_IO_and_Stream.AssemblyInfoInputs.cache
+E:\GitHub\PG-DAC git\.net\13_File IO and Stream\obj\Debug\net8.0\13_File_IO_and_Stream.AssemblyInfo.cs
+E:\GitHub\PG-DAC git\.net\13_File IO and Stream\obj\Debug\net8.0\13_File_IO_and_Stream.csproj.CoreCompileInputs.cache
+E:\GitHub\PG-DAC git\.net\13_File IO and Stream\obj\Debug\net8.0\13_File_IO_and_Stream.sourcelink.json
+E:\GitHub\PG-DAC git\.net\13_File IO and Stream\bin\Debug\net8.0\13_File_IO_and_Stream.exe
+E:\GitHub\PG-DAC git\.net\13_File IO and Stream\bin\Debug\net8.0\13_File_IO_and_Stream.deps.json
+E:\GitHub\PG-DAC git\.net\13_File IO and Stream\bin\Debug\net8.0\13_File_IO_and_Stream.runtimeconfig.json
+E:\GitHub\PG-DAC git\.net\13_File IO and Stream\bin\Debug\net8.0\13_File_IO_and_Stream.dll
+E:\GitHub\PG-DAC git\.net\13_File IO and Stream\bin\Debug\net8.0\13_File_IO_and_Stream.pdb
+E:\GitHub\PG-DAC git\.net\13_File IO and Stream\obj\Debug\net8.0\13_File_IO_and_Stream.dll
+E:\GitHub\PG-DAC git\.net\13_File IO and Stream\obj\Debug\net8.0\refint\13_File_IO_and_Stream.dll
+E:\GitHub\PG-DAC git\.net\13_File IO and Stream\obj\Debug\net8.0\13_File_IO_and_Stream.pdb
+E:\GitHub\PG-DAC git\.net\13_File IO and Stream\obj\Debug\net8.0\13_File_IO_and_Stream.genruntimeconfig.cache
+E:\GitHub\PG-DAC git\.net\13_File IO and Stream\obj\Debug\net8.0\ref\13_File_IO_and_Stream.dll

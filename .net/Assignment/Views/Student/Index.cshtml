@@ -1,0 +1,32 @@
+﻿<h3>Fill Student Details</h3>
+<form asp-controller="Student" asp-action="DisplayStud" method="post">
+    <div>
+        <lable class="form-group">Id </lable>
+        <input type="number" name="id" class="form-control"></input>
+    </div>
+    <div class="form-group">
+        <label>Name </label>
+        <input type="text" name="sname" class="form-control"></input>
+    </div>
+    <div class="form-group">
+        <label>Age </label>
+        <input type="number" name="age" class="form-control"></input>
+    </div>
+    <div class="form-group">
+        <label>Marks </label>
+        <input type="number" name="smarks" class="form-control"></input>
+    </div>
+    <div class="form-group">
+        <label>Gender </label>
+        <input type="radio" name="Gender" value="M" >Male</input>
+        <input type="radio" name="Gender" value="F" >FeMale</input>
+    </div>
+    <div class="form-group">
+        <label>Adress </label>
+        <input type="text" name="add" class="form-control"></input>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary"></input>
+    </div>
+
+</form>

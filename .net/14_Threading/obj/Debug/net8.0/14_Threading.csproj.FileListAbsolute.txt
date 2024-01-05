@@ -1,0 +1,15 @@
+E:\GitHub\PG-DAC git\.net\14_Threading\bin\Debug\net8.0\14_Threading.exe
+E:\GitHub\PG-DAC git\.net\14_Threading\bin\Debug\net8.0\14_Threading.deps.json
+E:\GitHub\PG-DAC git\.net\14_Threading\bin\Debug\net8.0\14_Threading.runtimeconfig.json
+E:\GitHub\PG-DAC git\.net\14_Threading\bin\Debug\net8.0\14_Threading.dll
+E:\GitHub\PG-DAC git\.net\14_Threading\bin\Debug\net8.0\14_Threading.pdb
+E:\GitHub\PG-DAC git\.net\14_Threading\obj\Debug\net8.0\14_Threading.GeneratedMSBuildEditorConfig.editorconfig
+E:\GitHub\PG-DAC git\.net\14_Threading\obj\Debug\net8.0\14_Threading.AssemblyInfoInputs.cache
+E:\GitHub\PG-DAC git\.net\14_Threading\obj\Debug\net8.0\14_Threading.AssemblyInfo.cs
+E:\GitHub\PG-DAC git\.net\14_Threading\obj\Debug\net8.0\14_Threading.csproj.CoreCompileInputs.cache
+E:\GitHub\PG-DAC git\.net\14_Threading\obj\Debug\net8.0\14_Threading.sourcelink.json
+E:\GitHub\PG-DAC git\.net\14_Threading\obj\Debug\net8.0\14_Threading.dll
+E:\GitHub\PG-DAC git\.net\14_Threading\obj\Debug\net8.0\refint\14_Threading.dll
+E:\GitHub\PG-DAC git\.net\14_Threading\obj\Debug\net8.0\14_Threading.pdb
+E:\GitHub\PG-DAC git\.net\14_Threading\obj\Debug\net8.0\14_Threading.genruntimeconfig.cache
+E:\GitHub\PG-DAC git\.net\14_Threading\obj\Debug\net8.0\ref\14_Threading.dll

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "STnR1goiRfgfDpZUC3ZDJtbWtrgY5z7jsvSp9Ia/bCS9icIvV44wpVMZXt82LHpZ3p12WnQGXZ0OnHb09Vv2/Q==",
+  "success": true,
+  "projectFilePath": "E:\\GitHub\\PG-DAC git\\.net\\15_Ado.net\\15_Ado.net.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Shrinath\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
+    "C:\\Users\\Shrinath\\.nuget\\packages\\mysqlconnector\\2.3.3\\mysqlconnector.2.3.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "13_File_IO_and_Stream/1.0.0": {
+        "runtime": {
+          "13_File_IO_and_Stream.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "13_File_IO_and_Stream/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
